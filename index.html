@@ -2,58 +2,125 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aero Home Renovation</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="images/AeroIcon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/AeroIcon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero fade-in">
-    <div class="hero-content">
-      <div class="logo-container">
-        <img src="images/AeroLogo.png" alt="Aero Home Logo">
+  <!-- HERO -->
+  <header class="hero" data-aos="fade-up">
+    <div class="hero-content" data-aos="fade-up">
+      <div class="logo-container" data-aos="fade-up">
+        <img src="images/AeroLogo.png" alt="Aero Home Logo" />
       </div>
-      <div class="text-container">
-        <h1>
-          YOUR HOME, <span class="highlight-keyword">PERFECTED</span>.
-        </h1>
+      <div class="text-container" data-aos="fade-up">
+        <h1>YOUR HOME, <span class="highlight-keyword">PERFECTED</span>.</h1>
       </div>
+    </div>
+
+    <div class="scroll-prompt">
+      <span>Scroll Down</span>
+      <div class="arrow">&#8595;</div>
     </div>
   </header>
 
-  <!-- OUR MISSION SECTION -->
-  <section class="mission fade-in">
-    <h1 class="mission-title">OUR MISSION</h1>
-    <p class="mission-text">
-      At Aero Home Renovation, our mission is simple — to deliver top quality work, reliable service, and trusted solutions to every home project. We thrive on commitment, customer service, and creativity.
+  <!-- MISSION -->
+  <section class="mission" data-aos="fade-up">
+    <h1 class="mission-title" data-aos="fade-up">HOME RENOVATIONS MADE EASY</h1>
+    <p class="mission-text" data-aos="fade-up">
+      At Aero Home Renovation, our mission is simple — to deliver top quality work, reliable service, and trusted
+      solutions to every home project. We thrive on commitment, customer service, and creativity. We do anything
+      from decks, drywall and flooring, to full home moving and yardcare (including sprinkler system installation).
+      Whether it is a deck, basement or kitchen, leave it to us for a finishing shine!
     </p>
   </section>
 
-  <!-- OUR SERVICES SECTION -->
-  <section class="services fade-in">
-    <h1 class="services-title">OUR SERVICES</h1>
+  <!-- SERVICES -->
+  <section class="services" data-aos="fade-up">
+    <h1 class="services-title" data-aos="fade-up">OUR SERVICES</h1>
+
+    <!-- OUTDOOR -->
+    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
+      <h2 data-aos="fade-up">OUTDOOR</h2>
+      <div class="jobs">
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/deckvinyl.jpg" alt="Deck Vinyl">
+          <p>Professional deck vinyl installation to protect and elevate your outdoor space.</p>
+        </div>
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/yardcare.jpg" alt="Yard Care">
+          <p>Complete yard care services to keep your lawn healthy and stunning year-round.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDOOR -->
+    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
+      <h2 data-aos="fade-up">INDOOR</h2>
+      <div class="jobs">
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/flooring.jpg" alt="Flooring">
+          <p>Elegant wood flooring installations that transform your living spaces.</p>
+        </div>
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/drywall.jpg" alt="Drywall">
+          <p>Expert drywall repair and remodeling to refresh and restore interiors.</p>
+        </div>
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/painting.jpg" alt="Painting">
+          <p>Clean, precise interior painting for a polished, professional finish.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOVING & MORE -->
+    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
+      <h2 data-aos="fade-up">MOVING & MORE!</h2>
+      <div class="jobs">
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/moving.jpg" alt="Moving">
+          <p>Efficient moving and relocation services for homes, apartments, and offices.</p>
+        </div>
+        <div class="job-card" data-aos="fade-up">
+          <img src="images/dump.jpg" alt="Dump Service">
+          <p>Fast junk removal and dump runs to keep your property clutter-free.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section class="contact fade-in">
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+  <!-- CONTACT -->
+  <section class="contact" data-aos="fade-up">
+    <h2 data-aos="fade-up">Contact Us</h2>
+    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST" data-aos="fade-up">
+      <input type="text" name="name" placeholder="Your Name" required data-aos="fade-up" />
+      <input type="email" name="email" placeholder="Your Email" required data-aos="fade-up" />
+      <textarea name="message" placeholder="Your Message" required data-aos="fade-up"></textarea>
+      <button type="submit" data-aos="fade-up">Send Message</button>
     </form>
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer data-aos="fade-up">
     <p>© 2025 Aero Home Renovations. All rights reserved.</p>
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script src="script.js"></script>
 
 </body>
 
