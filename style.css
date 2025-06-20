@@ -17,6 +17,24 @@ body.loaded {
   opacity: 1;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* HERO */
 .hero {
   background: #050505;
@@ -32,7 +50,6 @@ body.loaded {
   justify-content: center;
 }
 
-/* LOGO & DECORATIVE LINE */
 .logo-container {
   position: relative;
   width: 100%;
@@ -69,7 +86,6 @@ body.loaded {
   font-style: italic;
 }
 
-/* HIGHLIGHTED TEXT */
 .highlight-keyword {
   color: #FFA500;
   font-weight: bold;
@@ -135,7 +151,7 @@ body.loaded {
 
 .job-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: white;
   padding: 2%;
   margin: 2% 0;
@@ -151,11 +167,21 @@ body.loaded {
   object-fit: cover;
 }
 
-.job-card p {
+.job-info {
   padding-left: 3%;
-  font-size: 1.2rem;
-  text-align: left;
   flex: 1;
+  text-align: left;
+}
+
+.job-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.job-info p {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 /* CONTACT */
@@ -219,49 +245,27 @@ footer {
     margin-bottom: 1em;
   }
 
-  .job-card p {
+  .job-info {
     padding: 0;
   }
-
-  .logo-container img {
-    width: 50%;
-    padding: 0 4%;
-  }
-
- .scroll-prompt {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-  text-align: center;
-  color: #ffffff;
-  font-size: 1rem;
-  animation: fadeIn 1s ease 1.5s forwards;
-  opacity: 0;
-  pointer-events: none;
 }
+
+/* SCROLL PROMPT */
 .scroll-prompt {
-  margin-top: 3vh;
+  margin-top: 2vh;
   text-align: center;
   color: white;
-  font-size: 1rem;
-  animation: fadeIn 1s ease 1.5s forwards;
-  opacity: 0;
+  opacity: 0.9;
 }
 
-.scroll-prompt .arrow {
+.scroll-text {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.scroll-arrow {
   font-size: 2rem;
-  animation: bounce 1.5s infinite;
-  margin-top: 5px;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
+  line-height: 1;
 }
