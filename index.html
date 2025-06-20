@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="images/AeroIcon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-
 <body>
 
   <!-- HERO -->
@@ -26,15 +23,15 @@
     </div>
 
     <div class="scroll-prompt">
-      <span>Scroll Down</span>
-      <div class="arrow">&#8595;</div>
+      <div class="scroll-text">SCROLL DOWN</div>
+      <div class="scroll-arrow">↓</div>
     </div>
   </header>
 
   <!-- MISSION -->
   <section class="mission" data-aos="fade-up">
-    <h1 class="mission-title" data-aos="fade-up">HOME RENOVATIONS MADE EASY</h1>
-    <p class="mission-text" data-aos="fade-up">
+    <h1 class="mission-title">HOME RENOVATIONS MADE EASY</h1>
+    <p class="mission-text">
       At Aero Home Renovation, our mission is simple — to deliver top quality work, reliable service, and trusted
       solutions to every home project. We thrive on commitment, customer service, and creativity. We do anything
       from decks, drywall and flooring, to full home moving and yardcare (including sprinkler system installation).
@@ -44,53 +41,74 @@
 
   <!-- SERVICES -->
   <section class="services" data-aos="fade-up">
-    <h1 class="services-title" data-aos="fade-up">OUR SERVICES</h1>
+    <h1 class="services-title">OUR SERVICES</h1>
 
     <!-- OUTDOOR -->
     <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2 data-aos="fade-up">OUTDOOR</h2>
+      <h2>OUTDOOR</h2>
       <div class="jobs">
         <div class="job-card" data-aos="fade-up">
-          <img src="images/deckvinyl.jpg" alt="Deck Vinyl">
-          <p>Professional deck vinyl installation to protect and elevate your outdoor space.</p>
+          <img src="images/deckvinyl.webp" alt="Deck Vinyl">
+          <div class="job-info">
+            <h3 class="job-title">Deck Vinyl Installation</h3>
+            <p>Professional deck vinyl installation to protect and elevate your outdoor space.</p>
+          </div>
         </div>
         <div class="job-card" data-aos="fade-up">
-          <img src="images/yardcare.jpg" alt="Yard Care">
-          <p>Complete yard care services to keep your lawn healthy and stunning year-round.</p>
+          <img src="images/yardcare.webp" alt="Yard Care">
+          <div class="job-info">
+            <h3 class="job-title">Yard Care</h3>
+            <p>Complete yard care services to keep your lawn healthy and stunning year-round.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- INDOOR -->
     <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2 data-aos="fade-up">INDOOR</h2>
+      <h2>INDOOR</h2>
       <div class="jobs">
         <div class="job-card" data-aos="fade-up">
-          <img src="images/flooring.jpg" alt="Flooring">
-          <p>Elegant wood flooring installations that transform your living spaces.</p>
+          <img src="images/flooring.webp" alt="Flooring">
+          <div class="job-info">
+            <h3 class="job-title">Flooring Installation</h3>
+            <p>Elegant wood flooring installations that transform your living spaces.</p>
+          </div>
         </div>
         <div class="job-card" data-aos="fade-up">
-          <img src="images/drywall.jpg" alt="Drywall">
-          <p>Expert drywall repair and remodeling to refresh and restore interiors.</p>
+          <img src="images/drywall.webp" alt="Drywall">
+          <div class="job-info">
+            <h3 class="job-title">Drywall & Remodel</h3>
+            <p>Expert drywall repair and remodeling to refresh and restore interiors.</p>
+          </div>
         </div>
         <div class="job-card" data-aos="fade-up">
-          <img src="images/painting.jpg" alt="Painting">
-          <p>Clean, precise interior painting for a polished, professional finish.</p>
+          <img src="images/painting.webp" alt="Painting">
+          <div class="job-info">
+            <h3 class="job-title">Interior Painting</h3>
+            <p>Clean, precise interior painting for a polished, professional finish.</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- MOVING & MORE -->
     <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2 data-aos="fade-up">MOVING & MORE!</h2>
+      <h2>MOVING & MORE!</h2>
       <div class="jobs">
         <div class="job-card" data-aos="fade-up">
-          <img src="images/moving.jpg" alt="Moving">
-          <p>Efficient moving and relocation services for homes, apartments, and offices.</p>
+          <img src="images/moving.webp" alt="Moving">
+          <div class="job-info">
+            <h3 class="job-title">Moving Services</h3>
+            <p>Efficient moving and relocation services for homes, apartments, and offices.</p>
+          </div>
         </div>
         <div class="job-card" data-aos="fade-up">
-          <img src="images/dump.jpg" alt="Dump Service">
-          <p>Fast junk removal and dump runs to keep your property clutter-free.</p>
+          <img src="images/dump.webp" alt="Dump Service">
+          <div class="job-info">
+            <h3 class="job-title">Dump & Junk Removal</h3>
+            <p>Fast junk removal and dump runs to keep your property clutter-free.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -98,17 +116,17 @@
 
   <!-- CONTACT -->
   <section class="contact" data-aos="fade-up">
-    <h2 data-aos="fade-up">Contact Us</h2>
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST" data-aos="fade-up">
-      <input type="text" name="name" placeholder="Your Name" required data-aos="fade-up" />
-      <input type="email" name="email" placeholder="Your Email" required data-aos="fade-up" />
-      <textarea name="message" placeholder="Your Message" required data-aos="fade-up"></textarea>
-      <button type="submit" data-aos="fade-up">Send Message</button>
+    <h2>Contact Us</h2>
+    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <!-- FOOTER -->
-  <footer data-aos="fade-up">
+  <footer class="fade-in">
     <p>© 2025 Aero Home Renovations. All rights reserved.</p>
   </footer>
 
@@ -123,5 +141,4 @@
   <script src="script.js"></script>
 
 </body>
-
 </html>
