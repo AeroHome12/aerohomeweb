@@ -3,32 +3,28 @@ window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
 
-// Accordion toggle logic for service sections
+// Toggle visibility of job cards in service sections (accordion behavior)
 function toggleSection(section) {
-  const allSections = document.querySelectorAll('.service-category');
   const jobs = section.querySelector('.jobs');
+  const allJobs = document.querySelectorAll('.jobs');
 
-  allSections.forEach(sec => {
-    const secJobs = sec.querySelector('.jobs');
-    if (sec !== section) {
-      secJobs.classList.remove('expanded');
+  allJobs.forEach(jobList => {
+    if (jobList !== jobs) {
+      jobList.classList.remove('expanded');
     }
   });
 
   jobs.classList.toggle('expanded');
 }
 
-// Initialize AOS (Animate On Scroll)
+// Animate On Scroll (AOS) init
 AOS.init({
   duration: 800,
   once: true
 });
 
+// Hide scroll prompt after scroll
 window.addEventListener('scroll', () => {
   const scrollPrompt = document.querySelector('.scroll-prompt');
-  if (window.scrollY > 100) {
-    scrollPrompt.style.display = 'none';
-  } else {
-    scrollPrompt.style.display = 'block';
-  }
+  scrollPrompt.style.display = window.scrollY > 100 ? 'none' : 'block';
 });
