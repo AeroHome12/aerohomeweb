@@ -1,224 +1,522 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aero Home Renovation</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="images/AeroIcon.ico" />
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-</head>
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
 
-<body>
+body.loaded {
+  opacity: 1;
+}
 
-  <!-- HERO -->
-  <header class="hero" data-aos="fade-up">
-    <div class="hero-content" data-aos="fade-up">
-      <div class="logo-container" data-aos="fade-up">
-        <img src="images/AeroLogo.png" alt="Aero Home Logo" />
-      </div>
-      <div class="text-container" data-aos="fade-up">
-        <h1>YOUR HOME, <span class="highlight-keyword">PERFECTED</span>.</h1>
-      </div>
-    </div>
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1s;
+}
 
-    <div class="scroll-prompt">
-      <div class="scroll-text">SCROLL DOWN</div>
-      <div class="scroll-arrow">↓</div>
-    </div>
-  </header>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  <!-- MISSION -->
-  <section class="mission" data-aos="fade-up">
-    <h1 class="mission-title">HOME RENOVATION MADE EASY</h1>
-    <p class="mission-text">
-      At Aero Home Renovation, our mission is simple — to deliver top quality work, reliable service, and trusted
-      solutions to every home project. We thrive on commitment, customer service, and creativity. We do anything
-      from decks, drywall and flooring, to full home moving and yard service. Whether it is a deck, basement or
-      kitchen, leave it to us for a smooth finish!
-    </p>
-  </section>
+/* HERO */
+.hero {
+  background: #050505;
+  color: white;
+  padding: 4vh 1%;
+  text-align: center;
+}
 
-  <!-- SERVICES -->
-  <section class="services" data-aos="fade-up">
-    <h1 class="services-title">OUR SERVICES</h1>
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    <!-- INDOOR -->
-    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2>INDOOR 🏠</h2>
-      <div class="jobs">
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/flooring.webp" alt="Flooring">
-          <div class="job-info">
-            <h3 class="job-title">Flooring Installation</h3>
-            <p>Elegant wood flooring installations that drastically transform
-              your living spaces. We offer installations over preexisting
-              concrete and wood floors, ensuring the wood looks as natural as
-              possible, while being durable and low maintenance. Reach out to us
-              for wood options & color schemes to make the most of your home.
-            </p>
-          </div>
-        </div>
+.logo-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
 
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/drywall.webp" alt="Drywall">
-          <div class="job-info">
-            <h3 class="job-title">Drywall & Remodeling</h3>
-            <p>Expert drywall repair and remodeling to refresh and restore interiors.
-              We offer drywall repair for small blemishes, and up to entire section
-              replacements, with mudding and sanding to ensure a perfect, level
-              finish ready for beautiful paint.
-            </p>
-          </div>
-        </div>
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0.3vh;
+  background-color: white;
+  z-index: 0;
+}
 
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/painting.webp" alt="Painting">
-          <div class="job-info">
-            <h3 class="job-title">Painting & Finish</h3>
-            <p>We specialize in painting and and beautifying your home. Whether it's a
-              fence, shed, or your entire house, no painting job is too big for us. We
-              are experts in colors, technique and what looks best, so do not hesitate
-              to speak with us and get the quality work you are looking
-            </p>
-          </div>
-        </div>
+.logo-container img {
+  position: relative;
+  z-index: 1;
+  width: 35%;
+  height: auto;
+  background: black;
+  padding: 0 2%;
+}
 
-      </div>
-    </div>
+.text-container h1 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 4.5vw;
+  letter-spacing: 1vw;
+  font-style: italic;
+}
 
-    <!-- OUTDOOR -->
-    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2>OUTDOOR 🌱</h2>
-      <div class="jobs">
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/deckvinyl.webp" alt="Deck Vinyl">
-          <div class="job-info">
-            <h3 class="job-title">Deck Vinyl Installation</h3>
-            <p>Professional deck vinyl installation to protect and elevate your deck.
-              This ensures a waterproof, visually pleasing & low maintenance outdoor space.
-              Speak with us about color options, vinyl types and styling aesthetics to
-              transfrom your outdoor space today.
-            </p>
-          </div>
-        </div>
+.highlight-keyword {
+  color: #FFA500;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
 
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/yardcare.webp" alt="Yard Care">
-          <div class="job-info">
-            <h3 class="job-title">Yard Services</h3>
-            <p>Yard care and services to keep your yards healthy and stunning year round.
-              Our yard services include, but are not limited to:</p>
-            <ul>
-              <li>Lawn mowing, edging & trimming</li>
-              <li>Seasonal clean-ups (spring and fall)</li>
-              <li>Fertilization and weed control</li>
-              <li>Tree, shrub & hedge trimming</li>
-              <li>Aeration and overseeding</li>
-              <li>Snow removal (seasonal)</li>
-            </ul>
-          </div>
-        </div>
+/* MISSION */
+.mission {
+  text-align: center;
+  padding: 5% 2%;
+}
 
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/sprinklerinstall.webp" alt="Underground Sprinklers">
-          <div class="job-info">
-            <h3 class="job-title">Underground Sprinkler Installation</h3>
-            <p>Thinking about an underground sprinkler system? Leave it to us to
-              manage it for you. Our sprinkler systems are industry standard, and
-              include cutting edge features, controllable from your smartphone.
-              Reach out to us to discuss your yard watering needs.
-            </p>
-          </div>
-        </div>
+.mission-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
 
-      </div>
-    </div>
+.mission-text {
+  max-width: 80%;
+  margin: auto;
+  font-size: 1.3rem;
+}
 
-    <!-- MOVING & MORE -->
-    <div class="service-category" onclick="toggleSection(this)" data-aos="fade-up">
-      <h2>MOVING & MORE 🚚</h2>
-      <div class="jobs">
+/* SERVICES */
+.services {
+  padding: 5% 2%;
+  background: linear-gradient(135deg, #ffe7af 0%, #FFA500 50%, #ffe7af 100%);
+  text-align: center;
+}
 
-        <!-- Job 1: Moving Services -->
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/moving.webp" alt="Moving">
-          <div class="job-info">
-            <h3 class="job-title">Moving Services</h3>
-            <p>Changing homes? We're here to help! Moving can be stressful and complex,
-              but with the right equipment and logistics from us, it's as easy as it gets.
-              We will:</p>
-            <li>Take a look, and estimate the time it will take ✔️</li>
-            <li>Manage vehicles, and do all the heavy lifting ourselves ✔️</li>
-            <li>Disassemble and reassemble all furniture back the way it was ✔️</li>
-            <li>Optionally pack all items ✔️</li>
-            <li>Load & unload all items with extra care ✔️</li>
-            <li>Safely transport your home items to the new location ✔️</li>
-            <li>Help with unpacking and assembly, ensuring a smooth process ✔️</li>
-            <p>Please reach out to us and get moving today!</p>
-          </div>
-        </div>
+.services-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 4%;
+}
 
-        <!-- Job 2: Dump & Junk Removal -->
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/dump.webp" alt="Dump Service">
-          <div class="job-info">
-            <h3 class="job-title">Dump & Junk Removal</h3>
-            <p>We offer clutter and junk removal, no matter the size or amount. Anything
-              from organics (grass, tree bark or yard leftovers), to hard materials
-              that just need to be gone. We offer timely service for cleaner, better homes.
-            </p>
-          </div>
-        </div>
+.service-category {
+  margin: 4% auto;
+  max-width: 90%;
+  background: #fff;
+  padding: 2%;
+  border-radius: 1em;
+  cursor: pointer;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
 
-        <!-- Job 3: Handywork -->
-        <div class="job-card" data-aos="fade-up">
-          <img src="images/handywork.webp" alt="General Labor">
-          <div class="job-info">
-            <h3 class="job-title">Handywork</h3>
-            <p>Need a hand with lifting, a faucet fix/replacement or anything else
-              around the house? We've got your back! We do anything from a fix,
-              a replacement, all the way to installations. Let us know how we can help,
-              and get what you need done today in a timely manner with friendly service.
-            </p>
-          </div>
-        </div>
+.service-category h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
 
-      </div>
-    </div>
-  </section>
+/* JOB CARDS */
+.jobs {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
 
-  <!-- CONTACT -->
-<section class="contact" data-aos="fade-up">
-  <h2>Contact Us</h2>
-  <p class="contact-subtitle">Get A Quote - it's free!</p>
-  <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <input type="tel" name="phone" placeholder="Your Phone Number (Optional - Preferred)" />
-    <textarea name="message" placeholder="Your Message (Please be detailed)" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+.jobs.expanded {
+  /* No fixed max-height here anymore */
+}
 
 
-  <!-- FOOTER -->
-  <footer class="fade-in">
-    <p>© 2025 Aero Home Renovation. All rights reserved.</p>
-  </footer>
+.job-card {
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  background: white;
+  padding: 2%;
+  margin: 2% 0;
+  border-radius: 1em;
+  box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
-  <script src="script.js"></script>
+.job-card img {
+  width: 20%;
+  height: auto;
+  border-radius: 1em;
+  object-fit: cover;
+}
 
-</body>
+.job-info {
+  padding-left: 3%;
+  flex: 1;
+  text-align: left;
+}
 
-</html>
+.job-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.job-info p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* CONTACT */
+.contact {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact form {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contact textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  padding: 16px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #e0a800;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 2%;
+  margin-top: 5%;
+  font-size: 110%; /* increase to 120% of default */
+}
+
+/* SCROLL PROMPT */
+.scroll-prompt {
+  margin-top: 2vh;
+  text-align: center;
+  color: white;
+  opacity: 0.9;
+}
+
+.scroll-text {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* ----------------------------------
+   Small Devices: Phones (≤ 480px)
+---------------------------------- */
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 8vw;
+    letter-spacing: 2vw;
+  }
+
+  .job-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-card img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+
+  .job-info {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 50px 10px;
+  }
+
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contact form {
+    padding: 20px;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+/* ----------------------------------
+   Medium Devices: Phones + Tablets (481px – 768px)
+---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .text-container h1 {
+    font-size: 7vw;
+    letter-spacing: 3vw;
+  }
+
+  .job-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-card img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .job-info {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 60px 10px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .contact form {
+    padding: 25px;
+    box-shadow: none;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+
+/* ----------------------------------
+   Large Tablets & Small Laptops (769px – 1024px)
+---------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-container h1 {
+    font-size: 5vw;
+    letter-spacing: 2vw;
+  }
+
+  .job-card {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .job-card img {
+    width: 45%;
+  }
+
+  .job-info {
+    padding: 1em;
+  }
+
+  .contact {
+    padding: 80px 40px;
+  }
+
+  .contact h2 {
+    font-size: 2.4rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .contact form {
+    padding: 40px;
+    max-width: 90%;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+    padding: 16px;
+  }
+}
+
+
+/* ----------------------------------
+   Standard Desktops (1025px – 1439px)
+---------------------------------- */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .text-container h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .job-card {
+    flex-direction: row;
+  }
+
+  .job-card img {
+    width: 300px;
+  }
+
+  .job-info {
+    padding: 2em;
+  }
+
+  .contact {
+    padding: 100px 80px;
+  }
+
+  .contact h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .contact form {
+    max-width: 650px;
+    padding: 40px;
+  }
+}
+
+
+/* ----------------------------------
+   Large Screens: Ultra-wide Desktops (≥ 1440px)
+---------------------------------- */
+@media (min-width: 1440px) {
+  .text-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .job-card {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    padding: 120px 100px;
+  }
+
+  .contact form {
+    max-width: 750px;
+    padding: 50px;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.4rem;
+  }
+}
