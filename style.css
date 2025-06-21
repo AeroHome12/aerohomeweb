@@ -39,7 +39,7 @@ body.loaded {
 .hero {
   background: #050505;
   color: white;
-  padding: 10vh 2%;
+  padding: 4vh 1%;
   text-align: center;
 }
 
@@ -99,6 +99,7 @@ body.loaded {
 }
 
 .mission-title {
+  font-family: 'Varela Round', sans-serif;
   font-size: 3rem;
   margin-bottom: 1em;
 }
@@ -117,6 +118,7 @@ body.loaded {
 }
 
 .services-title {
+  font-family: 'Varela Round', sans-serif;
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 4%;
@@ -150,6 +152,7 @@ body.loaded {
 }
 
 .job-card {
+  font-family: 'Varela Round', sans-serif;
   display: flex;
   align-items: flex-start;
   background: white;
@@ -186,37 +189,76 @@ body.loaded {
 
 /* CONTACT */
 .contact {
-  max-width: 90%;
-  margin: 6% auto;
-  padding: 0 2%;
-}
-
-form {
+  width: 100%;
+  padding: 80px 20px;
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-input,
-textarea {
-  margin-bottom: 1em;
-  padding: 0.8em;
-  font-size: 1em;
+.contact h2 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact form {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 0.5em;
+  border-radius: 8px;
+  transition: border-color 0.2s;
 }
 
-button {
-  padding: 1em;
-  background: #007BFF;
-  color: white;
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contact textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact button {
+  padding: 16px;
+  background-color: #ffc107;
+  color: #333;
   border: none;
-  font-size: 1em;
-  border-radius: 0.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background: #0056b3;
+.contact button:hover {
+  background-color: #e0a800;
 }
 
 /* FOOTER */
@@ -226,28 +268,7 @@ footer {
   text-align: center;
   padding: 2%;
   margin-top: 5%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .text-container h1 {
-    font-size: 7vw;
-    letter-spacing: 3vw;
-  }
-
-  .job-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .job-card img {
-    width: 100%;
-    margin-bottom: 1em;
-  }
-
-  .job-info {
-    padding: 0;
-  }
+  font-size: 110%; /* increase to 120% of default */
 }
 
 /* SCROLL PROMPT */
@@ -268,4 +289,233 @@ footer {
 .scroll-arrow {
   font-size: 2rem;
   line-height: 1;
+}
+
+/* ----------------------------------
+   Small Devices: Phones (≤ 480px)
+---------------------------------- */
+@media (max-width: 480px) {
+  .text-container h1 {
+    font-size: 8vw;
+    letter-spacing: 2vw;
+  }
+
+  .job-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-card img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+
+  .job-info {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 50px 10px;
+  }
+
+  .contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contact form {
+    padding: 20px;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+
+/* ----------------------------------
+   Medium Devices: Phones + Tablets (481px – 768px)
+---------------------------------- */
+@media (min-width: 481px) and (max-width: 768px) {
+  .text-container h1 {
+    font-size: 7vw;
+    letter-spacing: 3vw;
+  }
+
+  .job-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .job-card img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .job-info {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 60px 10px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .contact form {
+    padding: 25px;
+    box-shadow: none;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .contact button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+
+/* ----------------------------------
+   Large Tablets & Small Laptops (769px – 1024px)
+---------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .text-container h1 {
+    font-size: 5vw;
+    letter-spacing: 2vw;
+  }
+
+  .job-card {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .job-card img {
+    width: 45%;
+  }
+
+  .job-info {
+    padding: 1em;
+  }
+
+  .contact {
+    padding: 80px 40px;
+  }
+
+  .contact h2 {
+    font-size: 2.4rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .contact form {
+    padding: 40px;
+    max-width: 90%;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+    padding: 16px;
+  }
+}
+
+
+/* ----------------------------------
+   Standard Desktops (1025px – 1439px)
+---------------------------------- */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .text-container h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .job-card {
+    flex-direction: row;
+  }
+
+  .job-card img {
+    width: 300px;
+  }
+
+  .job-info {
+    padding: 2em;
+  }
+
+  .contact {
+    padding: 100px 80px;
+  }
+
+  .contact h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .contact form {
+    max-width: 650px;
+    padding: 40px;
+  }
+}
+
+
+/* ----------------------------------
+   Large Screens: Ultra-wide Desktops (≥ 1440px)
+---------------------------------- */
+@media (min-width: 1440px) {
+  .text-container h1 {
+    font-size: 3.8rem;
+    letter-spacing: 0.2em;
+  }
+
+  .job-card {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact {
+    padding: 120px 100px;
+  }
+
+  .contact form {
+    max-width: 750px;
+    padding: 50px;
+  }
+
+  .contact h2 {
+    font-size: 3rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.4rem;
+  }
 }
