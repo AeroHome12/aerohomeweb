@@ -148,8 +148,9 @@ body.loaded {
 }
 
 .jobs.expanded {
-  max-height: 1000px;
+  /* No fixed max-height here anymore */
 }
+
 
 .job-card {
   font-family: 'Varela Round', sans-serif;
