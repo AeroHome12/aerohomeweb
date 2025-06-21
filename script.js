@@ -6,13 +6,21 @@ window.addEventListener('load', () => {
 // Toggle visibility of job cards in service sections (accordion behavior)
 function toggleSection(section) {
   const jobs = section.querySelector('.jobs');
-  const allJobs = document.querySelectorAll('.jobs');
+  const allSections = document.querySelectorAll('.service-category');
 
-  allJobs.forEach(jobList => {
-    if (jobList !== jobs) {
-      jobList.classList.remove('expanded');
+  allSections.forEach(otherSection => {
+    const otherJobs = otherSection.querySelector('.jobs');
+    if (otherSection !== section) {
+      otherJobs.style.maxHeight = null;
+      otherJobs.classList.remove('expanded');
     }
   });
+
+  if (jobs.classList.contains('expanded')) {
+    jobs.style.maxHeight = null;
+  } else {
+    jobs.style.maxHeight = jobs.scrollHeight + "px";
+  }
 
   jobs.classList.toggle('expanded');
 }
