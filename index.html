@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aero Home Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="images/AeroIcon.ico" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Fixed Top-Left Logo -->
+  <div class="fixed-logo" data-aos="zoom-in-up">
+    <a href="#top"><img src="images/AeroLogo.webp" alt="Aero Home Logo"/></a>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content" data-aos="zoom-in-up">
+      <div class="logo-container" data-aos="zoom-in-up">
+        <img src="images/AeroLogo.webp" alt="Aero Home Logo" />
+      </div>
+      <div class="text-container" data-aos="zoom-in-up">
+        <h1>LANDSCAPING | RENOVATION | INSTALLATIONS</h1>
+      </div>
+    </div>
+
+    <div class="scroll-prompt" data-aos="zoom-in-up" aria-label="Scroll down prompt">
+      <div class="scroll-text" data-aos="zoom-in-up">LEARN MORE</div>
+      <div class="scroll-arrow"data-aos="zoom-in-up" aria-hidden="true">↓</div>
+    </div>
+  </header>
+
+  <!-- MISSION -->
+  <section class="mission" data-aos="zoom-in-up">
+  <!-- Title stays on top -->
+  <h1 class="mission-title" data-aos="zoom-in-up">
+    ABOUT <span class="highlight-keyword2">US</span>
+  </h1>
+
+  <!-- Flex container for image and text -->
+  <div class="mission-body" data-aos="zoom-in-up">
+    <!-- Left: Image -->
+    <div class="mission-image">
+      <img src="images/missionphoto.webp" alt="Mission Image" data-aos="zoom-in-up">
+    </div>
+
+    <!-- Right: Text -->
+    <p class="mission-text">
+      - At Aero Home, we are an experienced team and know how to get things done right. We deliver top quality work, reliable service, and trusted
+      solutions to every home project. We thrive on commitment, customer service, and creativity.<br> <br>- With years of experience, we bring expertise
+      and creativity for all your home needs. Get in touch with us today!
+    </p>
+  </div>
+</section>
+
+  <!-- SERVICES -->
+  <section class="services" data-aos="zoom-in-up">
+    <h1 class="services-title">OUR SERVICES</h1>
+    <!-- No buttons or job cards here -->
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" data-aos="zoom-in-up">
+    <h2>Contact Us</h2>
+    <p data-aos="zoom-in-up" class="contact-subtitle">Get A Quote - it's free!</p>
+    <form data-aos="zoom-in-up" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <input data-aos="zoom-in-up" type="text" name="name" placeholder="Your Name" required />
+      <input data-aos="zoom-in-up" type="email" name="email" placeholder="Your Email" required />
+      <input data-aos="zoom-in-up" type="tel" name="phone" placeholder="Your Phone Number (Optional - Preferred)" />
+      <textarea data-aos="zoom-in-up" name="message" placeholder="Your Message (Please be detailed)" required></textarea>
+      <button data-aos="zoom-in-up" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Aero Home Company. All rights reserved.</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
