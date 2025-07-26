@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize AOS (Animate On Scroll)
   AOS.init({
-    duration: 500,
-    once: true
+    duration: 1100,
+    once: false
   });
 });
 
