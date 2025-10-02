@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aero Home™ Company - Landing Page</title>
+  <meta name="description"
+    content="Aero Home Company provides professional home services, outdoors and indoors in Lethbridge. Get a free estimate today!">
+  <meta name="keywords"
+    content="landscaping, renovations, drywall, painting, Lethbridge, handyman, Calgary, garden, cleanup">
+
+  <link rel="stylesheet" href="index-style.css" />
+  <link rel="icon" type="image/x-icon" href="images/AeroLogo.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Promo Popup -->
+  <div id="promo-popup" class="promo-popup-overlay hidden">
+    <div class="promo-popup">
+      <h2>The fall rush is here, and so are great savings 🍂</h2>
+      <p>Getting in touch is now faster and easier, just use our form below and get fast estimates at no cost!</p>
+      <div class="button-wrapper">
+        <a href="#contact" class="btn-primary">TRY IT NOW</a>
+        <button class="close-btn" aria-label="Close popup">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Ribbon -->
+  <div class="top-ribbon">
+    <div class="ribbon-logo">
+      <a href="#top"><img src="images/AeroLogo.webp" alt="Aero Home Logo" /></a>
+    </div>
+    <div class="ribbon-label">Aero Home™ Company</div>
+    <div class="ribbon-buttons">
+      <a href="/about-us.html">ABOUT US</a>
+      <a href="#services">OUR SERVICES</a>
+      <a href="#contact">REQUEST A QUOTE</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="pay.html">PAYMENT FORM</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="logo-container">
+        <img src="images/AeroLogo.webp" alt="Aero Home Logo" />
+      </div>
+      <div class="text-container">
+        <h1>LETHBRIDGE'S<span class="highlight-keyword"> HOME SERVICE </span> COMPANY</h1>
+        <div class="hero-button">
+          <a href="#contact" class="btn-primary">Get A Free Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-prompt" aria-label="Scroll down prompt">
+      <div class="scroll-arrow" aria-hidden="true"><i class="fas fa-arrow-down-long"></i></div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h1 class="services-title"><i class="fa-solid fa-minus"></i> OUR <span class="highlight-keyword">SERVICES</span>
+      <i class="fa-solid fa-minus"></i></h1>
+
+        <h2 class="services-subtitle">Click to Learn More</h2>
+
+    <h2 class="services-category-1">OUTDOOR SERVICES</h2>
+    <div class="services-row-one">
+      <a href="/service-pages/landscape-page.html" class="service-card">
+        <p class="service-description">LANDSCAPING</p>
+        <img src="images/job1.webp" alt="Job 1" class="service-image" />
+      </a>
+      <a href="/service-pages/yard-page.html" class="service-card">
+        <p class="service-description">YARD MAINTENANCE</p>
+        <img src="images/job2.webp" alt="Job 2" class="service-image" />
+      </a>
+    </div>
+
+    <h2 class="services-category-2">INDOOR SERVICES</h2>
+    <div class="services-row-two">
+      <a href="/service-pages/painting-page.html" class="service-card">
+        <p class="service-description">WALLS & PAINTING</p>
+        <img src="images/job3.webp" alt="Job 3" class="service-image" />
+      </a>
+      <a href="/service-pages/insulation-page.html" class="service-card">
+        <p class="service-description">HOME INSULATION</p>
+        <img src="images/job4.webp" alt="Job 4" class="service-image" />
+      </a>
+    </div>
+
+    <h2 class="services-category-3">OTHER SERVICES</h2>
+    <div class="services-row-three">
+      <a href="/service-pages/handywork-page.html" class="service-card">
+        <p class="service-description">HANDY WORK</p>
+        <img src="images/job5.webp" alt="Job 5" class="service-image" />
+      </a>
+      <a href="/service-pages/flooring-page.html" class="service-card">
+        <p class="service-description">FLOORING & INSTALLATIONS</p>
+        <img src="images/job6.webp" alt="Job 6" class="service-image" />
+      </a>
+    </div>
+
+    <h1 class="pricing-category">POPULAR <span class="highlight-keyword">PACKAGES</span></h1>
+
+    <div class="pricing-row-1">
+      <div class="pricing-card" id="junk-removal-card">
+        <h1 class="pricing-icon"><i class="fas fa-trailer"></i></h1>
+        <h2 class="pricing-title">Junk Removal</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$100</h4>
+      </div>
+      <div class="pricing-card" id="mow-edge-card">
+        <h1 class="pricing-icon"><i class="fa-solid fa-leaf"></i></h1>
+        <h2 class="pricing-title">Basic Mow + Edge</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$45</h4>
+      </div>
+      <div class="pricing-card" id="seasonal-cleanup-card">
+        <h1 class="pricing-icon"><i class="fas fa-tree"></i></h1>
+        <h2 class="pricing-title">Seasonal Cleanup</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$120</h4>
+      </div>
+    </div>
+
+    <div class="pricing-row-2">
+      <div class="pricing-card" id="fabric-rock-card">
+        <h1 class="pricing-icon"><i class="fa-solid fa-hill-rockslide"></i></h1>
+        <h2 class="pricing-title">Fabric + Gravel</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$250</h4>
+      </div>
+      <div class="pricing-card" id="gate-fix-card">
+        <h1 class="pricing-icon"><i class="fa-solid fa-hammer"></i></h1>
+        <h2 class="pricing-title">Gate Fix</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$90</h4>
+      </div>
+      <div class="pricing-card" id="sand-paint-card">
+        <h1 class="pricing-icon"><i class="fa-solid fa-paint-roller"></i></h1>
+        <h2 class="pricing-title">Sand / Paint</h2>
+        <h3 class="pricing-subtitle">FROM</h3>
+        <h4 class="pricing-price">$200</h4>
+      </div>
+    </div>
+
+    <h2 class="pricing-note">
+      <i class="fa-solid fa-minus"></i> Prices vary by dimensions & material costs <i class="fa-solid fa-minus"></i>
+    </h2>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="mission">
+    <h1 class="mission-title"><i class="fa-solid fa-minus"></i> ABOUT<span class="highlight-keyword"> US</span> <i
+        class="fa-solid fa-minus"></i></h1>
+    <h2 class="mission-subtitle">Why Choose Aero Home™ Company?</h2>
+    <div class="mission-body">
+      <div class="mission-image">
+        <img src="images/missionphoto.webp" alt="Mission Image">
+      </div>
+      <p class="mission-text">
+        - At Aero, we are not just another company, but an experienced startup with a drive for better homes in the
+        community. We deliver top quality work, reliable service, and trusted solutions to every home project, while
+        staying within budget. Our top priorities are commitment, customer service, and a job well done.
+        <br><br>
+        <i class="fas fa-lightbulb"></i> Locally Owned & Operated<br>
+        <i class="fas fa-money-bill-1-wave"></i> Free estimates and competitive pricing<br>
+        <i class="fas fa-face-smile-beam"></i> Your satisfaction is <i><u>always</u></i> guaranteed<br>
+        <i class="fas fa-folder-open"></i> Honest service and budget friendly<br>
+        <i class="fa-solid fa-handshake"></i> Professional, simple, yet reliable
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="photo-gallery-section">
+    <h1 class="gallery-title"><i class="fa-solid fa-minus"></i> OUR GALLERY <i class="fa-solid fa-minus"></i></h1>
+    <div class="photo-gallery">
+      <div class="gallery-track">
+        <img src="galleryimages/photo1.webp" alt="Gallery Photo 1" />
+        <img src="galleryimages/photo2.webp" alt="Gallery Photo 2" />
+        <img src="galleryimages/photo3.webp" alt="Gallery Photo 3" />
+        <img src="galleryimages/photo4.webp" alt="Gallery Photo 4" />
+        <img src="galleryimages/photo5.webp" alt="Gallery Photo 5" />
+        <img src="galleryimages/photo6.webp" alt="Gallery Photo 6" />
+        <img src="galleryimages/photo7.webp" alt="Gallery Photo 7" />
+        <img src="galleryimages/photo8.webp" alt="Gallery Photo 8" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <h3>Get A Quote Online</h3>
+      <p class="contact-subtitle">No obligations - it's free!</p>
+
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+
+      <select name="service" required>
+        <option value="none" selected disabled hidden>Select Service Type</option>
+        <option value="outdoor">Lawn & Outdoor</option>
+        <option value="indoor">Home & Indoor</option>
+        <option value="installations">Installations & Handy Jobs</option>
+        <option value="other">Other - Questions/Comments Welcome</option>
+      </select>
+
+      <textarea name="message" placeholder="Your Message (Please be detailed)" rows="5" required></textarea>
+
+      <!-- Hidden config fields for FormSubmit -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
+      <input type="hidden" name="_next" value="https://aerohome.ca/quote-thank.html" />
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
+        class="fa-solid fa-minus"></i></h2>
+
+    <div class="contact-info-row">
+      <a class="contact-box" href="tel:4036356840">
+        <h4><i class="fas fa-phone"></i></h4>
+        <p>(403) 635 6840</p>
+      </a>
+
+      <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
+        <h4><i class="fas fa-envelope"></i></h4>
+        <p>aerohomerenovations@gmail.com</p>
+      </a>
+
+      <!-- Optional Social Links -->
+      <!-- 
+    <a class="contact-box" href="https://www.facebook.com/people/Aero-Home-Company/61577840212272/#" target="_blank">
+      <h4><i class="fab fa-facebook-f"></i></h4>
+      <p>Facebook Page</p>
+    </a>
+    
+    <a class="contact-box" href="https://google.com" target="_blank">
+      <h4><i class="fab fa-google"></i></h4>
+      <p>Google Business</p>
+    </a>
+    -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="operation-hours">Hours of Operation:<br>Mon-Sat 9:00 AM - 7:00 PM</p>
+    <div class="social-icons">
+      <a class="social-icon" href="https://www.facebook.com/people/Aero-Home-Company/61577840212272/#" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="social-icon" href="https://www.instagram.com/abdulalk_006" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <p class="copyright-note">© 2025 Aero Home Company. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
