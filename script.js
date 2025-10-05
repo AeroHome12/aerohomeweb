@@ -1,24 +1,3 @@
-// Detect screen width and apply media-specific logic
-function detectMediaQuery() {
-  const width = window.innerWidth;
-
-  if (width >= 1281) {
-    return "min-1281px";
-  } else if (width >= 1025) {
-    return "1025-1280px";
-  } else if (width >= 768) {
-    return "768-1024";
-  } else if (width >= 380 && width <= 420) {
-    const heroTitle = document.querySelector('.hero .text-container h1');
-    if (heroTitle) {
-      heroTitle.textContent = "LANDSCAPING RENOVATION INSTALLATIONS";
-    }
-    return "380-420px";
-  } else {
-    return "other";
-  }
-}
-
 // Basic mobile user agent check
 function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About us - Aero Home™ Company</title>
+    <meta name="description"
+        content="Discover what makes us loved by clients in every visit - and what drives our amazing work and reliable pricing">
+    <meta name="keywords"
+        content="raking, mowing, trimming, edging, mulching, planting, weeding, pruning, clipping, digging, aerating, dethatching, seeding, fertilizing, 
+    composting, sweeping, blowing, bagging, hauling, lifting, shoveling, hoeing, tilling, spreading, gathering, mulching, stacking, cutting, hedging, 
+    clearing, collecting, chopping, bundling, staking, leveling, scraping, patching, hauling, pulling, scattering, disposing">
+    <link rel=" stylesheet" href="/special-pages/about-us-style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/AeroLogo.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Top Ribbon -->
+    <div class="top-ribbon">
+        <div class="ribbon-logo">
+            <a href="#top"><img src="/images/AeroLogo.webp" alt="Aero Home Logo" /></a>
+        </div>
+        <div class="ribbon-label">Aero Home™ Company</div>
+        <div class="ribbon-buttons">
+            <a href="/index.html">BACK TO MAIN SITE</a>
+            <a href="/special-pages/quote-form.html">REQUEST A QUOTE</a>
+            <a href="/special-pages/pay.html">PAYMENT FORM</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="text-container">
+                <h1><span class="highlight-keyword">ABOUT US</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section id="mission" class="mission">
+        <h1 class="mission-title"><i class="fa-solid fa-minus"></i> ABOUT<span class="highlight-keyword"> US</span> <i
+                class="fa-solid fa-minus"></i></h1>
+        <h2 class="mission-subtitle">Why Choose Aero Home™ Company?</h2>
+        <div class="mission-body">
+            <div class="mission-image">
+                <img src="/images/missionphoto.webp" alt="Mission Image">
+            </div>
+            <p class="mission-text">
+                - At Aero, we are not just another company, but an experienced startup with a drive for better homes in
+                the
+                community. We deliver top quality work, reliable service, and trusted solutions to every home project,
+                while
+                staying within budget. Our top priorities are commitment, customer service, and a job well done.
+                <br><br>
+                <i class="fas fa-lightbulb"></i> Locally Owned & Operated<br>
+                <i class="fas fa-money-bill-1-wave"></i> Free estimates and competitive pricing<br>
+                <i class="fas fa-face-smile-beam"></i> Your satisfaction is <i><u>always</u></i> guaranteed<br>
+                <i class="fas fa-folder-open"></i> Honest service and budget friendly<br>
+                <i class="fa-solid fa-handshake"></i> Professional, simple, yet reliable
+            </p>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase">
+        <h1 class="showcase-title">
+            <i class="fa-solid fa-minus"></i>SERVICES YOU CAN <span class="highlight-keyword">RELY</span> ON
+            <i class="fa-solid fa-minus"></i>
+        </h1>
+
+        <div class="showcase-rows">
+
+            <div class="showcase-row-1">
+                <div class="showcase-image">
+                    <img src="/service-pages/showcase-pages-images/yard-row1.webp" alt="Showcase Image 1">
+                </div>
+                <div class="showcase-text">
+                    <h3>EXPERIENCED & PROVEN</h3>
+                    <p>
+                        Having been in the field for years, we bring expertise and timely service for all our clients'
+                        needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="showcase-row-2">
+                <div class="showcase-image">
+                    <img src="/service-pages/showcase-pages-images/yard-row2.webp" alt="Showcase Image 2">
+                </div>
+                <div class="showcase-text">
+                    <h3>RELIABLE & FRIENDLY</h3>
+                    <p>
+                        We take pride in what we do, and share that feeling with everyone around us.
+                    </p>
+                </div>
+            </div>
+
+            <div class="showcase-row-3">
+                <div class="showcase-image">
+                    <img src="/service-pages/showcase-pages-images/yard-row3.webp" alt="Showcase Image 3">
+                </div>
+                <div class="showcase-text">
+                    <h3>COMMITED TO YOU</h3>
+                    <p>
+                        We're commited to a safe, respectful customer interaction.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+            <h3>Get A Quote Online</h3>
+            <p class="contact-subtitle">No obligations - it's free!</p>
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="tel" name="phone" placeholder="Your Phone Number" required />
+
+            <select name="service" required>
+                <option value="none" selected disabled hidden>Select Service Type</option>
+                <option value="outdoor">Lawn & Outdoor</option>
+                <option value="indoor">Home & Indoor</option>
+                <option value="installations">Installations & Handy Jobs</option>
+                <option value="other">Other - Questions/Comments Welcome</option>
+            </select>
+
+            <textarea name="message" placeholder="Your Message (Please be detailed)" rows="5" required></textarea>
+
+            <!-- Hidden config fields for FormSubmit -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
+            <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
+                class="fa-solid fa-minus"></i></h2>
+
+        <div class="contact-info-row">
+            <a class="contact-box" href="tel:4036356840">
+                <h4><i class="fas fa-phone"></i></h4>
+                <p>(403) 635 6840</p>
+            </a>
+
+            <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
+                <h4><i class="fas fa-envelope"></i></h4>
+                <p>aerohomerenovations@gmail.com</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="operation-hours">Hours of Operation:<br>Mon-Sat 9:00 AM - 7:00 PM</p>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.facebook.com/people/Aero-Home-Company/61577840212272/#"
+                target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="social-icon" href="https://www.instagram.com/abdulalk_006" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="copyright-note">© 2025 Aero Home Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

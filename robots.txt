@@ -1,0 +1,12 @@
+# Block all search engines from non-public folders
+User-agent: *
+Disallow: /thankpages/
+Disallow: /images/
+Disallow: /galleryimages/
+Disallow: /service-pages/showcase-pages-images/
+
+# Allow everything else
+Allow: /
+
+# Sitemap location
+Sitemap: https://aerohome.ca/sitemap.xml
