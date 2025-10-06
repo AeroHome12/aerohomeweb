@@ -774,145 +774,34 @@ footer .social-icon:hover {
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
-  .hero {
-    padding: 12vh 1%;
-  }
+  /* BASE STRUCTURE - SKELETON FOR MEDIA QUERIES */
 
-  .logo-container img {
-    margin-top: 5vh;
-    width: 20vw;
-  }
-
-  .text-container h1 {
-    font-size: 3vw !important;
-    margin-top: 5vh;
-    letter-spacing: 0.5vw;
-  }
-
-  /* SCROLL PROMPT */
-  .scroll-prompt {
-    margin-top: 10vh;
-  }
-
-  .mission-body {
-    gap: 2vw;
-  }
-
-  .mission-image img {
-    max-width: 30vw;
-    border-radius: 2vw;
-  }
-
-  .mission-text {
-    font-size: 1.3vw;
-  }
-
-  .mission-title {
-    font-size: 2.8vw;
-    letter-spacing: 0.4vw;
-  }
-
-  .service-description {
-    margin-top: 2vh;
-    font-size: 3vh;
-  }
-
-  .contact h2 {
-    font-size: 3vw;
-    border-radius: 2vw;
-  }
-
-  .contact h3 {
-    font-size: 3vw;
-  }
-
-  .contact-subtitle {
-    font-size: 1.5vw;
-  }
-
-  .contact-box {
-    min-width: 20vw;
-  }
-
-  .contact-box h4 {
-    font-size: 2vw;
-  }
-
-  .contact-box p {
-    font-size: 1vw;
-  }
-
-  .contact form {
-    padding: 10vh 10vw;
-    border-radius: 1vw;
-    gap: 2.5vh;
-  }
-
-  .contact input,
-  .contact textarea {
-    padding: 2vh 1vw;
-    font-size: 1vw;
-  }
-
-  .contact textarea {
-    min-height: 5vw;
-  }
-
-  .contact button {
-    padding: 3vh;
-    font-size: 1vw;
-    border-radius: 1vw;
-  }
-
-  /* MAP SECTION */
-  .map-section {
-    width: 99vw;
-    padding: 2vh 1vw;
+  /* GLOBAL */
+  * {
     margin: 0;
-    background: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .map-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    gap: 2vw;
+  body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
   }
 
-  .map-container {
-    width: 50%;
-    min-width: 50%;
-    /*min-width: 300px;*/
-    overflow: hidden;
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }
-
-  .map-title h1 {
-    height: 100%;
-    font-size: 5vw;
-  }
-
-  /* TOP RIBBON*/
-  .ribbon-label {
-    font-size: 1.5vw;
-  }
-
-
-  .ribbon-logo img {
-    margin-top: 1vh;
-    margin-left: 0.2vw;
+  html {
+    scroll-padding-top: 10vh;
   }
 
   /* PROMO POPUP */
   .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .promo-popup {
@@ -920,6 +809,10 @@ footer .social-icon:hover {
     height: 40vh;
     border-radius: 2vw;
     padding: 3vh 1.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .promo-popup h2 {
@@ -929,7 +822,6 @@ footer .social-icon:hover {
 
   .promo-popup p {
     font-size: 1.3vw;
-    margin-bottom: 20px;
   }
 
   .button-wrapper {
@@ -940,436 +832,1785 @@ footer .social-icon:hover {
   .btn-primary {
     padding: 1vh 1vw;
     font-size: 1.1vw;
-    background: #df9100;
-    color: white;
-    text-decoration: none;
-    border: none;
     border-radius: 0.3vw;
-    font-weight: bold;
-    cursor: pointer;
   }
 
   .close-btn {
     padding: 1vh 1vw;
     font-size: 1.3vw;
-    background: #ccc;
-    color: #333;
-    border: none;
     border-radius: 0.3vw;
-    cursor: pointer;
-  }
-}
-
-/* 
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
-*/
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-  .hero {
-    padding: 18vh 1%;
   }
 
-  .logo-container img {
-    width: 30vw;
-  }
-
-  .text-container h1 {
-    font-size: 3vw !important;
-    letter-spacing: 0.5vw;
-  }
-
-  .mission-body {
-    gap: 3.5vw;
-  }
-
-  .mission-image img {
-    max-width: 50vw;
-  }
-
-  .mission-text {
-    font-size: 1.8vw;
-  }
-
-  .mission-title {
-    font-size: 7.5vw;
-  }
-
-  footer {
-    font-size: 1.5vw;
-  }
-
-  .services-title {
-    font-size: 5vw;
-  }
-
-  .service-card {
-    width: 35vw;
-    margin-bottom: 8vh;
-  }
-
-  .service-card:hover {
-    transform: translateY(-0.3vh);
-  }
-
-  .service-image {
-    border-radius: 0vw;
-  }
-
-  .service-description {
-    margin-top: 2vh;
-    font-size: 3.5vh;
-  }
-
-  .contact h2 {
-    font-size: 4vw;
-    margin-bottom: 3vh;
-  }
-
-  .contact-info-row {
-    margin-top: 1vh;
-    margin-bottom: 3vh;
-  }
-
-  .contact-box {
-    min-width: 14vw;
-  }
-
-  .contact-box h4 {
-    font-size: 2.5vw;
-  }
-
-  .contact-box p {
-    font-size: 2vw;
-  }
-
-  .contact form {
-    padding: 6vh 3vw;
-    border-radius: 1vw;
-    gap: 2.5vh;
-  }
-
-  .contact h3 {
-    font-size: 4vw;
-  }
-
-  .contact-subtitle {
-    font-size: 2vw;
-  }
-
-  .contact input,
-  .contact textarea {
-    padding: 1vh 1vw;
-    font-size: 1.5vw;
-  }
-
-  .contact button {
-    padding: 2vh;
-    font-size: 2.5vw;
-  }
-
-  /* MAP SECTION */
-  .map-section {
-    width: 99vw;
-    height: 55vh;
-    padding: 2vh 1vw;
-    margin: 0;
-    background: #ffffff;
-  }
-
-  .map-wrapper {
-    height: 100%;
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    gap: 2vw;
-  }
-
-  .map-container {
-    width: 50%;
-    min-width: 50%;
-    /*min-width: 300px;*/
-    overflow: hidden;
-  }
-
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }
-
-  .map-title h1 {
-    height: 100%;
-    font-weight: 100;
-    font-size: 4.5vw;
+    min-height: 7vh;
     display: flex;
     align-items: center;
+    gap: 3vw;
   }
 
-  /* TOP RIBBON*/
   .ribbon-label {
     font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
-
 
   .ribbon-logo img {
     margin-top: 1vh;
     margin-left: 0.5vw;
+    height: 6vh;
   }
 
   .ribbon-buttons {
+    display: flex;
     gap: 2vw;
   }
 
   .ribbon-buttons a {
-    font-weight: 500;
-    padding: 1vh 2vw;
-    font-size: 1vw;
+    padding: 1vh 1vw;
+    letter-spacing: 0.1vw;
   }
-}
 
-/* 
-  ##Device = Tablets, iPads (Portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) {
-
+  /* HERO */
   .hero {
-    padding: 24vh 1%;
+    position: relative;
+    padding: 10vh 1%;
+    text-align: center;
   }
 
-  .logo-container img {
-    width: 50vw;
-  }
-
-  .text-container h1 {
-    font-size: 3vw !important;
-    letter-spacing: 0.5vw;
-  }
-
-  .mission-body {
+  .hero-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4vw;
-  }
-
-  .mission-image img {
-    max-width: 80vw;
-  }
-
-  .mission-text {
-    font-size: 3vw;
-  }
-
-  .mission-title {
-    font-size: 7.5vw;
-  }
-
-  footer {
-    font-size: 2vw;
-  }
-
-  .services-title {
-    font-size: 6.5vw;
-  }
-
-  .service-card {
-    width: 80vw;
-    margin-bottom: 12vh;
-  }
-
-  .service-card:hover {
-    transform: translateY(-0.3vh);
-  }
-
-  .service-image {
-    border-radius: 0vw;
-  }
-
-  .service-description {
-    margin-top: 2vh;
-    font-size: 3vh;
-  }
-
-  .contact h2 {
-    font-size: 7vw;
-    margin-bottom: 3vh;
-  }
-
-  .contact-info-row {
-    margin-top: 1vh;
-    margin-bottom: 3vh;
-  }
-
-  .contact-box {
-    min-width: 98vw;
-  }
-
-  .contact-box h4 {
-    font-size: 4vw;
-  }
-
-  .contact-box p {
-    font-size: 3vw;
-  }
-
-  .contact form {
-    padding: 6vh 3vw;
-    border-radius: 1vw;
-    gap: 2.5vh;
-  }
-
-  .contact h3 {
-    font-size: 6vw;
-  }
-
-  .contact-subtitle {
-    font-size: 3vw;
-  }
-
-  .contact input,
-  .contact textarea {
-    padding: 1vh 1vw;
-    font-size: 2.5vw;
-  }
-
-  .contact button {
-    padding: 2vh;
-    font-size: 3.5vw;
-  }
-
-  /* MAP SECTION */
-  .map-wrapper {
-    gap: 5vw;
-  }
-
-  .map-title h1 {
-    font-size: 7vw;
-  }
-
-  /* TOP RIBBON*/
-  .ribbon-label {
-    font-size: 3vw;
-  }
-
-
-  .ribbon-logo img {
-    margin-top: 0.5vh;
-    margin-left: 1vw;
-    width: 0;
-  }
-
-  .ribbon-buttons {
-    gap: 2.2vw;
-  }
-
-  .ribbon-buttons a {
-    font-weight: 500;
-    padding: 1vh 2.2vw;
-    font-size: 1.8vw;
-  }
-}
-
-/* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 480px
-*/
-@media (min-width: 320px) and (max-width: 480px) {
-
-  .hero {
-    padding: 20vh 1%;
+    justify-content: center;
   }
 
   .logo-container {
     width: 100%;
-    margin-bottom: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0vh;
   }
 
   .logo-container img {
-    z-index: 1;
-    width: 55vw;
+    width: 20%;
+    height: auto;
+    border-radius: 10vw;
     padding: 0 2%;
   }
 
   .text-container h1 {
-    position: relative;
-    font-family: 'Varela Round', sans-serif;
-    font-size: 6vw !important;
-    font-weight: bold;
+    font-size: 3.5vw !important;
     letter-spacing: 1vw;
   }
 
-  .mission-body {
-    flex-direction: column;
+  .hero-button {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 4vw;
+    margin-top: 10vh;
+  }
+
+  .hero-button .btn-primary {
+    padding: 2vh 5vw;
+    border-radius: 0.5vw;
+    font-size: 1.5vw;
+  }
+
+  .scroll-prompt {
+    margin-top: 5vh;
+  }
+
+  .scroll-arrow {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 4vh 4vw;
+    margin-bottom: 2vh;
     text-align: center;
   }
 
-  .mission-image img {
-    max-width: 90vw;
-    border-radius: 4.5vw;
-  }
-
-  .mission-text {
-    font-size: 4.5vw;
-    padding: 0 6vw;
-  }
-
-  .mission-title {
-    font-size: 7.5vw;
-    letter-spacing: 1.2vw;
-  }
-
-  footer {
+  .services-title {
     font-size: 3vw;
   }
 
-  .services-title {
-    font-size: 7.5vw;
-  }
-
-  /* Each service card */
-  .service-card {
-    width: 80vw;
-    margin-bottom: 8vh;
-    border: 0.7vw solid #555;
-    padding: 0.7vw;
-    transition: transform 0.3s ease;
-  }
-
-  .service-card:hover {
-    transform: translateY(-0.3vh);
-  }
-
-  /* Images */
-  .service-image {
-    border-radius: 0vw;
-  }
-
-  /* Description text */
-  .service-description {
+  .services-subtitle {
+    font-size: 2vw;
     margin-top: 2vh;
-    font-size: 2vh;
+  }
+
+  .services-category-1,
+  .services-category-2,
+  .services-category-3 {
+    font-size: 1.7vw;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    letter-spacing: 0.4vw;
+  }
+
+  .services-row-one,
+  .services-row-two,
+  .services-row-three {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    margin-bottom: 14vh;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    width: 35vw;
+    height: 55vh;
+    margin-bottom: 5vh;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    padding: 0.4vw;
+    margin-top: 1vh;
+  }
+
+  .service-description {
+    font-size: 3.5vh;
     line-height: 1.5;
   }
 
-  .contact h2 {
-    font-size: 7vw;
+  .learn-more {
+    font-size: 1.2vw;
+  }
+
+  /* PRICING */
+  .pricing-row-1,
+  .pricing-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+
+  .pricing-category {
+    font-size: 3vw;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .pricing-card {
+    width: 25vw;
+    height: 50vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pricing-icon {
+    font-size: 15vh;
+  }
+
+  .pricing-title {
+    font-size: 2vw;
+    margin-top: 0vh;
+  }
+
+  .pricing-subtitle {
+    font-size: 1vw;
+    margin-top: 0.5vh;
+  }
+
+  .pricing-price {
+    font-size: 2.5vw;
+    margin-top: 0.5vh;
     margin-bottom: 2vh;
   }
 
-  .contact-info-row {
+  .pricing-note {
+    font-size: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  /* MISSION */
+  .mission {
+    padding: 5vh 5vw;
     margin-top: 1vh;
     margin-bottom: 3vh;
   }
 
+  .mission-title {
+    text-align: center;
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 8vh;
+  }
+
+  .mission-subtitle {
+    text-align: center;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 8vh;
+  }
+
+  .mission-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 4vw;
+    margin-top: 1.5vw;
+  }
+
+  .mission-image img {
+    width: 100%;
+    max-width: 40vw;
+    border-radius: 3vw;
+    padding: 0.3vw;
+  }
+
+  .mission-text {
+    max-width: 100%;
+    font-size: 1.5vw;
+    flex: 1;
+  }
+
+  /* GALLERY */
+  .photo-gallery-section {
+    padding: 4vh 0;
+  }
+
+  .gallery-title {
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: 1vw;
+  }
+
+  .gallery-subtitle {
+    font-size: 1vw;
+    text-align: center;
+    margin-top: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  .gallery-track {
+    display: inline-flex;
+    gap: 5vw;
+    margin-top: 3vh;
+  }
+
+  .gallery-track img {
+    height: 50vh;
+    width: 20vw;
+    border-radius: 1vw;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact h2 {
+    width: 100%;
+    font-size: 3vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-subtitle {
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 10vh 4vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 1vw;
+  }
+
+  .contact textarea {
+    min-height: 5vw;
+  }
+
+  .contact select {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 1vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+  }
+
+  .contact button {
+    padding: 3vh;
+    font-size: 1vw;
+    border-radius: 1vw;
+  }
+
   .contact-box {
-    min-width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5vh 2vw;
+    border-radius: 1vw;
+    min-width: 20vw;
   }
 
   .contact-box h4 {
+    font-size: 2vw;
+    margin-bottom: 1vh;
+  }
+
+  .contact-box p {
+    font-size: 1vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 1vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops --DONE--
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  /* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  /* PROMO POPUP */
+  .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo-popup {
+    width: 30vw;
+    height: 45vh;
+    border-radius: 2vw;
+    padding: 3vh 1.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .promo-popup h2 {
+    font-size: 2vw;
+    margin-bottom: 1vh;
+  }
+
+  .promo-popup p {
+    font-size: 1.6vw;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn-primary {
+    padding: 1vh 1vw;
+    font-size: 1.5vw;
+    border-radius: 0.3vw;
+  }
+
+  .close-btn {
+    padding: 1vh 1vw;
+    font-size: 1.5vw;
+    border-radius: 0.3vw;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .ribbon-label {
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  .ribbon-logo img {
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    height: 6vh;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    gap: 2vw;
+  }
+
+  .ribbon-buttons a {
+    padding: 1vh 1vw;
+    letter-spacing: 0.1vw;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 10vh 1%;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vh;
+  }
+
+  .logo-container img {
+    width: 35%;
+    height: auto;
+    border-radius: 10vw;
+    padding: 0 2%;
+  }
+
+  .text-container h1 {
+    font-size: 2.2vw;
+    letter-spacing: 1vw;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+  }
+
+  .hero-button .btn-primary {
+    padding: 2vh 5vw;
+    border-radius: 0.5vw;
+    font-size: 1.5vw;
+  }
+
+  .scroll-prompt {
+    margin-top: 7vh;
+  }
+
+  .scroll-arrow {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 4vh 2vw;
+    margin-bottom: 2vh;
+    text-align: center;
+  }
+
+  .services-title {
+    font-size: 3.5vw;
+  }
+
+  .services-subtitle {
+    font-size: 2vw;
+    margin-top: 2vh;
+  }
+
+  .services-category-1,
+  .services-category-2,
+  .services-category-3 {
+    font-size: 2vw;
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+    letter-spacing: 0.4vw;
+  }
+
+  .services-row-one,
+  .services-row-two,
+  .services-row-three {
+    display: flex;
+    justify-content: center;
+    gap: 6vw;
+    margin-bottom: 14vh;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    width: 35vw;
+    height: 50vh;
+    margin-bottom: 5vh;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    padding: 0.4vw;
+    margin-top: 1vh;
+  }
+
+  .service-description {
+    font-size: 3.5vh;
+    line-height: 1.5;
+  }
+
+  .learn-more {
+    font-size: 1.8vw;
+  }
+
+  /* PRICING */
+  .pricing-row-1,
+  .pricing-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+
+  .pricing-category {
+    font-size: 4vw;
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .pricing-card {
+    width: 25vw;
+    height: 45vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pricing-icon {
+    font-size: 15vh;
+  }
+
+  .pricing-title {
+    font-size: 2vw;
+    margin-top: 0vh;
+  }
+
+  .pricing-subtitle {
+    font-size: 1.5vw;
+    margin-top: 0.5vh;
+  }
+
+  .pricing-price {
+    font-size: 2.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+  }
+
+  .pricing-note {
+    font-size: 1.5vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  /* MISSION */
+  .mission {
+    padding: 5vh 5vw;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+  }
+
+  .mission-title {
+    text-align: center;
+    font-size: 3.5vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 8vh;
+  }
+
+  .mission-subtitle {
+    text-align: center;
+    font-size: 2.5vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 8vh;
+  }
+
+  .mission-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 4vw;
+    margin-top: 1.5vw;
+  }
+
+  .mission-image img {
+    width: 100%;
+    max-width: 35vw;
+    border-radius: 3vw;
+    padding: 0.3vw;
+  }
+
+  .mission-text {
+    max-width: 100%;
+    font-size: 1.8vw;
+    flex: 1;
+  }
+
+  /* GALLERY */
+  .photo-gallery-section {
+    padding: 4vh 0;
+  }
+
+  .gallery-title {
+    font-size: 3.5vw;
+    text-align: center;
+    letter-spacing: 1vw;
+  }
+
+  .gallery-subtitle {
+    font-size: 1vw;
+    text-align: center;
+    margin-top: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  .gallery-track {
+    display: inline-flex;
+    gap: 5vw;
+    margin-top: 3vh;
+  }
+
+  .gallery-track img {
+    height: 50vh;
+    width: 25vw;
+    border-radius: 1vw;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact h3 {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  .contact-subtitle {
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 4vh 5vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 1.5vw;
+  }
+
+  .contact textarea {
+    min-height: 5vw;
+  }
+
+  .contact select {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 1.5vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+  }
+
+  .contact button {
+    padding: 3vh;
+    font-size: 2vw;
+    border-radius: 1vw;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 2vw;
+    border-radius: 1vw;
+    min-width: 20vw;
+  }
+
+  .contact h2 {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-box h4 {
+    font-size: 3vw;
+    margin-bottom: 1vh;
+  }
+
+  .contact-box p {
+    font-size: 1.5vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 1.5vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Tablets, iPads (Portrait) --DONE--
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  /* PROMO POPUP */
+  .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo-popup {
+    width: 80vw;
+    height: 60vh;
+    border-radius: 2vw;
+    padding: 3vh 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .promo-popup h2 {
     font-size: 5vw;
+    margin-bottom: 1vh;
+  }
+
+  .promo-popup p {
+    font-size: 4.5vw;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn-primary {
+    padding: 1vh 2.5vw;
+    font-size: 4vw;
+    border-radius: 0.5vw;
+  }
+
+  .close-btn {
+    padding: 1vh 2.5vw;
+    font-size: 4vw;
+    border-radius: 0.5vw;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 0;
+  }
+
+  .ribbon-logo img {
+    display: none;
+  }
+
+  .ribbon-label {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0vw;
+  }
+
+  .ribbon-buttons a {
+    font-size: 2.5vw !important;
+    background: #df9100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2.5vw;
+    letter-spacing: 0.1vw;
+    text-align: center;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 15vh 1%;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+  }
+
+  .logo-container img {
+    width: 40%;
+    height: auto;
+    border-radius: 10vw;
+    padding: 0 2%;
+  }
+
+  .text-container h1 {
+    font-size: 8vw !important;
+    letter-spacing: 0vw;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh;
+  }
+
+  .hero-button .btn-primary {
+    padding: 2vh 5vw;
+    border-radius: 1vw;
+    font-size: 4vw;
+  }
+
+  .scroll-prompt {
+    margin-top: 10vh;
+  }
+
+  .scroll-arrow {
+    font-size: 6vw;
+    line-height: 1;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 4vh 4vw;
+    margin-bottom: 3vh;
+    text-align: center;
+  }
+
+  .services-title {
+    font-size: 6vw;
+  }
+
+  .services-subtitle {
+    font-size: 4vw;
+    margin-top: 2vh;
+  }
+
+  .services-category-1,
+  .services-category-2,
+  .services-category-3 {
+    background: #555;
+    font-size: 4vw;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    letter-spacing: 1vw;
+  }
+
+  .services-category-1 {
+    color: #7cda00;
+  }
+
+  .services-category-2 {
+    color: #b48100;
+  }
+
+  .services-category-3 {
+    color: #ffffff;
+  }
+
+  .services-row-one,
+  .services-row-two,
+  .services-row-three {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 10vh;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    width: 75vw;
+    height: 35vh;
+    margin-bottom: 12vh;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    padding: 0.4vw;
+    margin-top: 1vh;
+  }
+
+  .service-description {
+    font-size: 3vh;
+    padding: 1vh 2vw;
+    line-height: 1.5;
+  }
+
+  .learn-more {
+    font-size: 3.5vw;
+  }
+
+  /* PRICING */
+  .pricing-row-1,
+  .pricing-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+
+  .pricing-category {
+    padding: 1vh 1vw;
+    font-size: 7vw;
+    margin-top: 0vh;
+    margin-bottom: 4vh;
+    letter-spacing: 0.3vw;
+  }
+
+  .pricing-card {
+    width: 27vw;
+    height: 30vh;
+    margin-bottom: 2vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2vw;
+  }
+
+  .pricing-icon {
+    font-size: 6vh;
+  }
+
+  .pricing-title {
+    font-size: 4vw;
+    margin-top: 0vh;
+  }
+
+  .pricing-subtitle {
+    font-size: 2vw;
+    margin-top: 1vh;
+  }
+
+  .pricing-price {
+    font-size: 5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+  }
+
+  .pricing-note {
+    font-size: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  /* MISSION SECTION */
+  .mission {
+    padding: 2vh 6vw;
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+  }
+
+  .mission-title {
+    text-align: center;
+    font-size: 6vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 6vh;
+  }
+
+  .mission-subtitle {
+    text-align: center;
+    font-size: 4vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 6vh;
+  }
+
+  .mission-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    margin-top: 2vh;
+  }
+
+  .mission-image img {
+    width: 60vw;
+    max-width: 100%;
+    border-radius: 3vw;
+    padding: 0.5vh;
+  }
+
+  .mission-text {
+    font-size: 4vw;
+    text-align: left;
+    max-width: 80vw;
+  }
+
+  /* GALLERY */
+  .photo-gallery-section {
+    padding: 4vh 0;
+  }
+
+  .gallery-title {
+    font-size: 5vw;
+    text-align: center;
+    letter-spacing: 2vw;
+  }
+
+  .gallery-subtitle {
+    font-size: 0vw;
+    text-align: center;
+    margin-top: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  .gallery-track {
+    display: inline-flex;
+    gap: 3vw;
+    margin-top: 5vh;
+  }
+
+  .gallery-track img {
+    height: 40vh;
+    width: 50vw;
+    border-radius: 2vw;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact h3 {
+    width: 100%;
+    font-size: 6vw;
+    padding: 0vh 2vw;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+  }
+
+  .contact-subtitle {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 10vh 5vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 2vh 2vw;
+    font-size: 3vw;
+  }
+
+  .contact select {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 3vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+  }
+
+  .contact textarea {
+    min-height: 5vw;
+  }
+
+  .contact button {
+    padding: 3vh;
+    font-size: 3vw;
+    border-radius: 1.5vw;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 3vw;
+    border-radius: 1vw;
+    width: 90vw;
+  }
+
+  .contact h2 {
+    width: 100%;
+    font-size: 6vw;
+    padding: 1vh 2vw;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+  }
+
+  .contact-box h4 {
+    font-size: 4vw;
+    margin-bottom: 1vh;
+  }
+
+  .contact-box p {
+    font-size: 3.5vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 1vw;
+    font-size: 3vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait) --DONE--
+  ##Screen = B/w 320px to 480px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+  /* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  /* PROMO POPUP */
+  .promo-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promo-popup {
+    width: 80vw;
+    height: 40vh;
+    border-radius: 2vw;
+    padding: 3vh 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .promo-popup h2 {
+    font-size: 5vw;
+    margin-bottom: 1vh;
+  }
+
+  .promo-popup p {
+    font-size: 4.5vw;
+  }
+
+  .button-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .btn-primary {
+    padding: 1vh 2.5vw;
+    font-size: 4vw;
+    border-radius: 0.5vw;
+  }
+
+  .close-btn {
+    padding: 1vh 2.5vw;
+    font-size: 4vw;
+    border-radius: 0.5vw;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 0;
+  }
+
+  .ribbon-logo img {
+    display: none;
+  }
+
+  .ribbon-label {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0vw;
+  }
+
+  .ribbon-buttons a {
+    font-size: 2.5vw !important;
+    background: #df9100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2.5vw;
+    letter-spacing: 0.1vw;
+    text-align: center;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 10vh 1%;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+  }
+
+  .logo-container img {
+    width: 55%;
+    height: auto;
+    border-radius: 10vw;
+    padding: 0 2%;
+  }
+
+  .text-container h1 {
+    font-size: 10vw !important;
+    letter-spacing: 0vw;
+  }
+
+  .hero-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+  }
+
+  .hero-button .btn-primary {
+    padding: 2vh 5vw;
+    border-radius: 1vw;
+    font-size: 5vw;
+  }
+
+  .scroll-prompt {
+    margin-top: 6vh;
+  }
+
+  .scroll-arrow {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  /* SERVICES */
+  .services {
+    padding: 4vh 4vw;
+    margin-bottom: 3vh;
+    text-align: center;
+  }
+
+  .services-title {
+    font-size: 7vw;
+  }
+
+  .services-subtitle {
+    font-size: 5vw;
+    margin-top: 2vh;
+  }
+
+  .services-category-1,
+  .services-category-2,
+  .services-category-3 {
+    background: #555;
+    font-size: 6vw;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    letter-spacing: 1vw;
+  }
+
+  .services-category-1 {
+    color: #7cda00;
+  }
+
+  .services-category-2 {
+    color: #b48100;
+  }
+
+  .services-category-3 {
+    color: #ffffff;
+  }
+
+  .services-row-one,
+  .services-row-two,
+  .services-row-three {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 10vh;
+    flex-wrap: wrap;
+  }
+
+  .service-card {
+    width: 80vw;
+    height: 40vh;
+    margin-bottom: 12vh;
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    padding: 0.4vw;
+    margin-top: 1vh;
+  }
+
+  .service-description {
+    font-size: 3vh;
+    padding: 1vh 1vw;
+    line-height: 1.5;
+  }
+
+  .learn-more {
+    font-size: 4vw;
+  }
+
+  /* PRICING */
+  .pricing-row-1,
+  .pricing-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+  }
+
+  .pricing-category {
+    padding: 1vh 1vw;
+    font-size: 7vw;
+    margin-top: 0vh;
+    margin-bottom: 4vh;
+    letter-spacing: 0.3vw;
+  }
+
+  .pricing-card {
+    width: 27vw;
+    height: 30vh;
+    margin-bottom: 4vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2vw;
+  }
+
+  .pricing-icon {
+    font-size: 6vh;
+  }
+
+  .pricing-title {
+    font-size: 4vw;
+    margin-top: 0vh;
+  }
+
+  .pricing-subtitle {
+    font-size: 2vw;
+    margin-top: 1vh;
+  }
+
+  .pricing-price {
+    font-size: 5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+  }
+
+  .pricing-note {
+    font-size: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  /* MISSION */
+  .mission {
+    padding: 2vh 6vw;
+    margin-top: 0vh;
+    margin-bottom: 3vh;
+  }
+
+  .mission-title {
+    text-align: center;
+    font-size: 8vw;
+    letter-spacing: 0.5vw;
+    margin-bottom: 8vh;
+  }
+
+  .mission-subtitle {
+    text-align: center;
+    font-size: 4vw;
+    letter-spacing: 0.1vw;
+    margin-bottom: 8vh;
+  }
+
+  /* MISSION SECTION */
+  .mission-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    margin-top: 2vh;
+  }
+
+  .mission-image img {
+    width: 80vw;
+    max-width: 100%;
+    border-radius: 3vw;
+    padding: 0.5vh;
+  }
+
+  .mission-text {
+    font-size: 4vw;
+    text-align: left;
+    max-width: 80vw;
+  }
+
+  /* GALLERY */
+  .photo-gallery-section {
+    padding: 4vh 0;
+  }
+
+  .gallery-title {
+    font-size: 5.5vw;
+    text-align: center;
+    letter-spacing: 2vw;
+  }
+
+  .gallery-subtitle {
+    font-size: 0vw;
+    text-align: center;
+    margin-top: 1vh;
+    letter-spacing: 0.1vw;
+  }
+
+  .gallery-track {
+    display: inline-flex;
+    gap: 3vw;
+    margin-top: 5vh;
+  }
+
+  .gallery-track img {
+    height: 30vh;
+    width: 50vw;
+    border-radius: 2vw;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact h3 {
+    width: 100%;
+    font-size: 8vw;
+    padding: 0vh 2vw;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+  }
+
+  .contact-subtitle {
+    font-size: 5vw;
+    margin-bottom: 2vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  .contact form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 10vh 5vw;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 2vh 2vw;
+    font-size: 3.5vw;
+  }
+
+  .contact select {
+    width: 100%;
+    padding: 2vh 1vw;
+    font-size: 3.5vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+  }
+
+  .contact textarea {
+    min-height: 5vw;
+  }
+
+  .contact button {
+    padding: 3vh;
+    font-size: 4vw;
+    border-radius: 1.5vw;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1vh 3vw;
+    border-radius: 1vw;
+    width: 90vw;
+  }
+
+  .contact h2 {
+    width: 100%;
+    font-size: 8vw;
+    padding: 1vh 2vw;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+  }
+
+  .contact-box h4 {
+    font-size: 6vw;
     margin-bottom: 1vh;
   }
 
@@ -1377,84 +2618,21 @@ footer .social-icon:hover {
     font-size: 4vw;
   }
 
-  .contact form {
-    position: relative;
-    width: 100%;
-    max-width: 100vw;
-    padding: 6vh 3vw;
-    border-radius: 1vw;
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 1vw;
+    font-size: 3.5vw;
+  }
+
+  footer .social-icons {
     display: flex;
-    flex-direction: column;
-    gap: 2.5vh;
-  }
-
-  .contact h3 {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 6vw;
-  }
-
-  .contact-subtitle {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 3.5vw;
-    margin-bottom: 2vh;
-  }
-
-  .contact input,
-  .contact textarea {
-    padding: 1vh 1vw;
-    font-size: 3.5vw;
-  }
-
-  .contact button {
-    padding: 2vh;
-    font-size: 3.5vw;
-  }
-
-  /* MAP SECTION */
-  .map-section {
-    width: 100vw;
-    height: 55vh;
-    padding: 2vh 2vw;
-  }
-
-  .map-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .map-container {
-    width: 100%;
-    min-width: 50%;
-  }
-
-  .map-title h1 {
-    font-size: 9vw;
-  }
-
-  /* TOP RIBBON*/
-  .top-ribbon {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 0vh;
+    gap: 5vw;
+    margin-top: 1vh;
   }
 
-  .ribbon-label {
-    font-size: 5vw;
-  }
-
-
-  .ribbon-logo img {
-    width: 0;
-  }
-
-  .ribbon-buttons {
-    gap: 2vw;
-    margin-bottom: 2vh;
-  }
-
-  .ribbon-buttons a {
-    font-weight: 500;
-    padding: 0.5vh 1.5vw;
-    font-size: 4vw;
+  footer .copyright-note {
+    margin-top: 1vh;
   }
 }
