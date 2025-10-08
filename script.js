@@ -59,8 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const photoGallery = document.querySelector(".photo-gallery");
 
   if (photoGallery) {
-    let scrollAmount = 2; // pixels per frame
-    let direction = 1; // 1 = right, -1 = left
+    let scrollAmount = 3;
+    let direction = 1; //
 
     function autoScrollGallery() {
       photoGallery.scrollLeft += scrollAmount * direction;

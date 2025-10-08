@@ -1,64 +1,43 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   opacity: 1 !important;
   transform: none !important;
   font-family: 'Varela Round', sans-serif;
   background: #f4f4f4;
   color: #333;
-  line-height: 1.6;
   transition: opacity 0.8s ease;
-  user-select: none;
 }
 
 body.loaded {
   opacity: 1;
 }
 
-html {
-  scroll-padding-top: 10vh;
-}
-
-/* TOP RIBBON*/
+/* TOP RIBBON */
 .top-ribbon {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 7vh;
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 3vw;
   box-shadow: 0 0.2vh 0.8vw rgb(0, 0, 0);
   z-index: 9999;
   transition: transform 0.3s ease;
 }
 
 .ribbon-label {
-  font-size: 1.5vw;
   font-weight: bold;
   color: #000000;
   flex-shrink: 0;
-  margin-left: 1vw;
-  margin-right: 1vw;
   white-space: nowrap;
 }
 
-
 .ribbon-logo img {
-  margin-top: 1vh;
-  margin-left: 0.5vw;
-  height: 6vh;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .ribbon-buttons {
   display: flex;
-  gap: 2vw;
 }
 
 .ribbon-buttons a {
@@ -66,9 +45,6 @@ html {
   color: #000000;
   background-color: transparent;
   font-weight: bolder;
-  font-weight: bold;
-  letter-spacing: 0.1vw;
-  padding: 1vh 1vw;
   transition: background 0.2s ease;
 }
 
@@ -81,11 +57,9 @@ html {
   transform: translateY(-100%);
 }
 
-
-/* CONTACT SECTION*/
-.contact {
+/* CONTACT SECTION */
+#contact {
   position: relative;
-  padding: 1vh 1vw;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -93,110 +67,63 @@ html {
   text-align: center;
 }
 
-.contact h2 {
-  max-width: 100vw;
-  width: 100%;
-  font-size: 3vw;
-  padding: 1vh 2vw;
-  border-radius: 0vw;
-  color: #000000;
-  margin-top: 2vh;
-  margin-bottom: 3vh;
+#contact-form {
+  position: relative;
+  background: #555;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact h3 {
+#contact-form-title,
+#contact-form-subtitle {
   font-family: 'Varela Round', sans-serif;
-  font-size: 3vw;
-  color: #ffffff;
+  color: #fff;
 }
 
-.contact-subtitle {
+#contact-section-title {
   font-family: 'Varela Round', sans-serif;
-  font-size: 1.5vw;
-  color: #ffffff;
-  margin-bottom: 2vh;
+  color: #000;
 }
 
 .contact-info-row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2vw;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
 }
 
-.contact-box {
+#contact-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   text-decoration: none;
   background-color: #555;
-  padding: 1.5vh 2vw;
-  border-radius: 1vw;
-  min-width: 20vw;
   color: #fff;
   transition: all 0.3s ease;
 }
 
-.contact-box:hover {
+#contact-box:hover {
   background: linear-gradient(135deg, #ffa500, #ffcc80);
   color: #000;
   transform: translateY(-0.5vw);
 }
 
-.contact-box h4 {
-  font-size: 2vw;
-  margin-bottom: 1vh;
-}
-
-.contact-box p {
-  font-size: 1vw;
-  margin: 0;
-  word-break: break-word;
-}
-
-.contact form {
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
   position: relative;
   width: 100%;
-  max-width: 100vw;
-  background: #555;
-  padding: 10vh 10vw;
-  border-radius: 1vw;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5vh;
-}
-
-.contact input,
-.contact textarea {
-  position: relative;
-  width: 100%;
-  padding: 2vh 1vw;
-  font-size: 1vw;
   transition: border-color 0.2s;
 }
 
-.contact input:focus,
-.contact textarea:focus {
-  position: relative;
+#contact-form input:focus,
+#contact-form textarea:focus,
+#contact-form select:focus {
   border-color: #007bff;
   outline: none;
 }
 
-.contact textarea {
-  position: relative;
-  min-height: 5vw;
-  resize: vertical;
-}
-
-.contact select {
-  position: relative;
-  width: 100%;
-  padding: 2vh 1vw;
-  font-size: 1vw;
-  transition: border-color 0.2s;
+#contact-form select {
   border: none;
   background-color: #fff;
   color: #000;
@@ -205,62 +132,33 @@ html {
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
   background-position: right 1vw center;
-  background-size: 1.5vw;
 }
 
-.contact select:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.contact button {
-  position: relative;
-  padding: 3vh;
+#contact-submit-btn {
   background-color: #ffc107;
   color: #333;
   border: none;
-  font-size: 1vw;
   font-weight: bold;
-  border-radius: 1vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.contact button:hover {
+#contact-submit-btn:hover {
   background-color: #e0a800;
 }
 
 /* FOOTER */
 footer {
-  position: relative;
-  opacity: 1 !important;
-  transform: none !important;
   background: #222;
   color: #f4f4f4;
   text-align: center;
-  padding: 2vh 0;
   font-size: 1vw;
 }
 
-footer .operation-hours {
-  margin-top: 0vh;
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1vw;
-  margin-top: 1vh;
-}
-
 footer .social-icon {
-  text-decoration: none;
   color: #f4f4f4;
+  text-decoration: none;
   transition: color 0.3s ease;
-}
-
-footer .copyright-note {
-  margin-top: 1vh;
 }
 
 footer .social-icon:hover {
@@ -270,4 +168,693 @@ footer .social-icon:hover {
 .highlight-keyword {
   color: #FFA500;
   -webkit-text-stroke: 0.05vw #333;
+}
+
+/* ---------------------------------- */
+/* Responsive Layouts via Media Queries */
+
+/* 
+  ##Device = Desktops --DONE--
+  ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+/* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding-top: 10vh;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .ribbon-label {
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  .ribbon-logo img {
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    height: 6vh;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    gap: 2vw;
+  }
+
+  .ribbon-buttons a {
+    padding: 1vh 1vw;
+    letter-spacing: 0.1vw;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 1vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact-form-title {
+    width: 100%;
+    font-size: 3vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  #contact-form-subtitle {
+    font-size: 2vw;
+    margin-bottom: 3vh;
+  }
+
+  #contact-form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 4vh 5vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 2vh 2vw;
+    font-size: 1vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form select {
+    width: 100%;
+    padding: 2vh 2vw;
+    font-size: 1vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form textarea {
+    min-height: 5vw;
+  }
+
+  #contact-submit-btn {
+    padding: 3vh;
+    font-size: 1vw;
+    border-radius: 3vw;
+    margin-bottom: 4vh;
+  }
+
+  #contact-section-title {
+    width: 100%;
+    font-size: 3vw;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+  }
+
+  #contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 6vw;
+    border-radius: 4vw;
+    width: 25vw;
+  }
+
+  #contact-box h4 {
+    font-size: 1.5vw;
+    margin-bottom: 1vh;
+  }
+
+  #contact-box p {
+    font-size: 1vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 1.5vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops --DONE--
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+/* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding-top: 10vh;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 7vh;
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+  }
+
+  .ribbon-label {
+    font-size: 1.5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  .ribbon-logo img {
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+    height: 6vh;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    gap: 2vw;
+  }
+
+  .ribbon-buttons a {
+    padding: 1vh 1vw;
+    letter-spacing: 0.1vw;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 1vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact-form-title {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  #contact-form-subtitle {
+    font-size: 2vw;
+    margin-bottom: 3vh;
+  }
+
+  #contact-form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 4vh 5vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 1.5vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form select {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 1.5vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form textarea {
+    min-height: 5vw;
+  }
+
+  #contact-submit-btn {
+    padding: 3vh;
+    font-size: 1.5vw;
+    border-radius: 3vw;
+    margin-bottom: 4vh;
+  }
+
+  #contact-section-title {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+  }
+
+  #contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 6vw;
+    border-radius: 4vw;
+    width: 90vw;
+  }
+
+  #contact-title {
+    font-size: 2vw;
+    margin-bottom: 1vh;
+  }
+
+  #contact-text {
+    font-size: 1.5vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 1.5vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Tablets, iPads (Portrait) --DONE--
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+/* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding-top: 10vh;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 0;
+  }
+
+  .ribbon-logo img {
+    display: none;
+  }
+
+  .ribbon-label {
+    font-size: 2.5vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .ribbon-buttons a {
+    font-size: 2vw !important;
+    background: #df9100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2.5vw;
+    letter-spacing: 0.1vw;
+    text-align: center;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 1vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact-form-title {
+    width: 100%;
+    font-size: 6vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  #contact-form-subtitle {
+    font-size: 4vw;
+    margin-bottom: 3vh;
+  }
+
+  #contact-form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 4vh 5vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form select {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form textarea {
+    min-height: 5vw;
+  }
+
+  #contact-submit-btn {
+    padding: 3vh;
+    font-size: 3vw;
+    border-radius: 3vw;
+    margin-bottom: 4vh;
+  }
+
+  #contact-section-title {
+    width: 100%;
+    font-size: 6vw;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+  }
+
+  #contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 6vw;
+    border-radius: 4vw;
+    width: 90vw;
+  }
+
+  #contact-title {
+    font-size: 4vw;
+    margin-bottom: 1vh;
+  }
+
+  #contact-text {
+    font-size: 3vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 1vw;
+    font-size: 2.5vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait) --DONE--
+  ##Screen = B/w 320px to 480px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+/* GLOBAL */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    padding-top: 10vh;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* TOP RIBBON */
+  .top-ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    padding: 1vh 0;
+  }
+
+  .ribbon-logo img {
+    display: none;
+  }
+
+  .ribbon-label {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  .ribbon-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  .ribbon-buttons a {
+    font-size: 2.5vw !important;
+    background: #df9100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh 2.5vw;
+    letter-spacing: 0.1vw;
+    text-align: center;
+  }
+
+  /* CONTACT */
+  #contact {
+    padding: 1vh 0.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #contact-form-title {
+    width: 100%;
+    font-size: 6vw;
+    padding: 1vh 2vw;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+  }
+
+  #contact-form-subtitle {
+    font-size: 4vw;
+    margin-bottom: 3vh;
+  }
+
+  #contact-form {
+    width: 100%;
+    max-width: 100vw;
+    padding: 4vh 5vw;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form select {
+    width: 100%;
+    padding: 2vh 4vw;
+    font-size: 3vw;
+    background-position: right 1vw center;
+    background-size: 1.5vw;
+    border-radius: 3vw;
+  }
+
+  #contact-form textarea {
+    min-height: 5vw;
+  }
+
+  #contact-submit-btn {
+    padding: 3vh;
+    font-size: 3vw;
+    border-radius: 3vw;
+    margin-bottom: 4vh;
+  }
+
+  #contact-section-title {
+    width: 100%;
+    font-size: 6vw;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  .contact-info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
+  }
+
+  #contact-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 6vw;
+    border-radius: 4vw;
+    width: 90vw;
+  }
+
+  #contact-title {
+    font-size: 5vw;
+    margin-bottom: 1vh;
+  }
+
+  #contact-text {
+    font-size: 4vw;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 2vh 1vw;
+    font-size: 3.5vw;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 1vh;
+  }
+
+  footer .copyright-note {
+    margin-top: 1vh;
+  }
 }

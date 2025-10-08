@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -24,36 +23,26 @@ html {
 
 .thank-you-section {
   text-align: center;
-  padding: 4vh 15vw;
   max-width: 100%;
 }
 
 .thank-you-section h1 {
-  font-size: 5vw;
   color: #2c3e50;
 }
 
 .thank-you-section h2 {
-  font-size: 2vw;
   color: #34495e;
-  margin-top: 4vh;
 }
 
 .thank-you-section p {
-  font-size: 1.5vw;
   color: #555;
-  margin-top: 4vh;
 }
 
 .home-button {
   display: inline-block;
-  margin-top: 5vh;
-  padding: 2vh 2vw;
   background-color: #e0a800;
   color: white;
   text-decoration: none;
-  border-radius: 4px;
-  font-size: 1.3vw;
   transition: background-color 0.3s ease;
 }
 
@@ -65,30 +54,237 @@ html {
 /* Responsive Layouts via Media Queries */
 
 /* 
-  ##Device = Desktops
+  ##Device = Desktops --DONE--
   ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    opacity: 1 !important;
+    transform: none !important;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    transition: opacity 0.8s ease;
+    user-select: none;
+  }
+
+  body.loaded {
+    opacity: 1;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  .thank-you-section {
+    text-align: center;
+    padding: 4vh 3vw;
+    max-width: 100%;
+  }
+
+  .thank-you-section h1 {
+    font-size: 5vw;
+  }
+
+  .thank-you-section h2 {
+    font-size: 2.5vw;
+    margin-top: 4vh;
+  }
+
+  .thank-you-section p {
+    font-size: 1.5vw;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .home-button {
+    display: inline-block;
+    margin-top: 8vh;
+    padding: 2vh 1vw;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.5vw;
+    transition: background-color 0.3s ease;
+  }
 }
 
 /* 
-  ##Device = Laptops, Desktops
+  ##Device = Laptops, Desktops --DONE--
   ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    opacity: 1 !important;
+    transform: none !important;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    transition: opacity 0.8s ease;
+    user-select: none;
+  }
+
+  body.loaded {
+    opacity: 1;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  .thank-you-section {
+    text-align: center;
+    padding: 4vh 3vw;
+    max-width: 100%;
+  }
+
+  .thank-you-section h1 {
+    font-size: 8vw;
+  }
+
+  .thank-you-section h2 {
+    font-size: 4vw;
+    margin-top: 4vh;
+  }
+
+  .thank-you-section p {
+    font-size: 3vw;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .home-button {
+    display: inline-block;
+    margin-top: 8vh;
+    padding: 2vh 2vw;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 2vw;
+    transition: background-color 0.3s ease;
+  }
 }
 
 /* 
-  ##Device = Tablets, iPads (Portrait)
+  ##Device = Tablets, iPads (Portrait) --DONE--
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
 
+  body {
+    opacity: 1 !important;
+    transform: none !important;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    transition: opacity 0.8s ease;
+    user-select: none;
+  }
+
+  body.loaded {
+    opacity: 1;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  .thank-you-section {
+    text-align: center;
+    padding: 4vh 3vw;
+    max-width: 100%;
+  }
+
+  .thank-you-section h1 {
+    font-size: 15vw;
+  }
+
+  .thank-you-section h2 {
+    font-size: 5vw;
+    margin-top: 4vh;
+  }
+
+  .thank-you-section p {
+    font-size: 3.5vw;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .home-button {
+    display: inline-block;
+    margin-top: 8vh;
+    padding: 2vh 3vw;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 3.5vw;
+    transition: background-color 0.3s ease;
+  }
 }
 
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Device = Most of the Smartphones Mobiles (Portrait) --DONE--
   ##Screen = B/w 320px to 480px
 */
 @media (min-width: 320px) and (max-width: 480px) {
+  * {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    opacity: 1 !important;
+    transform: none !important;
+    font-family: 'Varela Round', sans-serif;
+    line-height: 1.6;
+    transition: opacity 0.8s ease;
+    user-select: none;
+  }
+
+  body.loaded {
+    opacity: 1;
+  }
+
+  html {
+    scroll-padding-top: 10vh;
+  }
+
+  .thank-you-section {
+    text-align: center;
+    padding: 4vh 3vw;
+    max-width: 100%;
+  }
+
+  .thank-you-section h1 {
+    font-size: 20vw;
+  }
+
+  .thank-you-section h2 {
+    font-size: 6vw;
+    margin-top: 4vh;
+  }
+
+  .thank-you-section p {
+    font-size: 4.5vw;
+    margin-top: 5vh;
+    text-align: center;
+  }
+
+  .home-button {
+    display: inline-block;
+    margin-top: 8vh;
+    padding: 2vh 3vw;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 4vw;
+    transition: background-color 0.3s ease;
+  }
 }

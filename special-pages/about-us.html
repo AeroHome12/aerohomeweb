@@ -4,14 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About us - Aero Home™ Company</title>
+
+    <title>About Us - Aero Home™ Company | Trusted Home Services in Lethbridge, Alberta</title>
+
     <meta name="description"
-        content="Discover what makes us loved by clients in every visit - and what drives our amazing work and reliable pricing">
+        content="Learn more about Aero Home™ Company — Lethbridge’s trusted team for landscaping, renovations, and home improvement. Discover our story, values, and commitment to reliable craftsmanship and fair pricing." />
+
     <meta name="keywords"
-        content="raking, mowing, trimming, edging, mulching, planting, weeding, pruning, clipping, digging, aerating, dethatching, seeding, fertilizing, 
-    composting, sweeping, blowing, bagging, hauling, lifting, shoveling, hoeing, tilling, spreading, gathering, mulching, stacking, cutting, hedging, 
-    clearing, collecting, chopping, bundling, staking, leveling, scraping, patching, hauling, pulling, scattering, disposing">
-    <link rel=" stylesheet" href="/special-pages/about-us-style.css" />
+        content="Aero Home, about Aero Home, Lethbridge home services, renovation company, landscaping company, professional contractors, handyman team, local business Alberta, home improvement experts, reliable service, Aero Home Company values" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Aero Home Company" />
+
+    <!-- Social / Open Graph -->
+    <meta property="og:title" content="About Aero Home™ Company | Our Story & Mission" />
+    <meta property="og:description"
+        content="At Aero Home™, we take pride in transforming homes across Lethbridge with honesty, craftsmanship, and care. Learn what makes our team stand out." />
+    <meta property="og:image" content="/images/about-hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://aerohome.ca/special-pages/about-us.html" />
+    <meta property="og:site_name" content="Aero Home™" />
+
+    <!-- Styles & Assets -->
+    <link rel="stylesheet" href="/special-pages/about-us-style.css" />
     <link rel="icon" type="image/x-icon" href="/images/AeroLogo.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap" rel="stylesheet" />
@@ -43,9 +58,13 @@
 
     <!-- Mission Section -->
     <section id="mission" class="mission">
-        <h1 class="mission-title"><i class="fa-solid fa-minus"></i> ABOUT<span class="highlight-keyword"> US</span> <i
-                class="fa-solid fa-minus"></i></h1>
+        <h1 class="mission-title">
+            <i class="fa-solid fa-minus"></i> ABOUT
+            <span class="highlight-keyword"> US</span>
+            <i class="fa-solid fa-minus"></i>
+        </h1>
         <h2 class="mission-subtitle">Why Choose Aero Home™ Company?</h2>
+
         <div class="mission-body">
             <div class="mission-image">
                 <img src="/images/missionphoto.webp" alt="Mission Image">
@@ -53,20 +72,37 @@
             <p class="mission-text">
                 - At Aero Home, we take pride in helping Lethbridge homeowners care for and improve their properties.
                 From paint & drywall, to lawncare and handy jobs, our focus stays simple: reliable service, fair
-                pricing, and
-                results. Every project is completed with attention to detail, respect for your property and budget, and
-                clear communication. We're a locally owned team built on trust, and our job is to ensure every client
-                feels
-                confident they chose the right team.
-                <br><br>
-                <i class="fas fa-lightbulb"></i> Locally Owned & Operated<br>
-                <i class="fas fa-money-bill-1-wave"></i> Free estimates and competitive pricing<br>
-                <i class="fas fa-face-smile-beam"></i> Your satisfaction is <i><u>always</u></i> guaranteed<br>
-                <i class="fas fa-folder-open"></i> Honest service and budget friendly<br>
-                <i class="fa-solid fa-handshake"></i> Professional, simple, yet reliable
+                pricing, and results. Every project is completed with attention to detail, respect for your property
+                and budget, and clear communication. We're a locally owned team built on trust, and our job is to ensure
+                every client feels confident they chose the right team.
             </p>
         </div>
+
+        <!-- Feature Squares -->
+        <div class="mission-features">
+            <div class="feature-card color1">
+                <h1><i class="fas fa-lightbulb"></i></h1>
+                <h2>Locally Owned & Operated</h2>
+            </div>
+            <div class="feature-card color2">
+                <h1><i class="fas fa-money-bill-1-wave"></i></h1>
+                <h2>Free Estimates & Competitive Pricing</h2>
+            </div>
+            <div class="feature-card color4">
+                <h1><i class="fas fa-folder-open"></i></h1>
+                <h2>Honest & Budget Friendly</h2>
+            </div>
+            <div class="feature-card color5">
+                <h1><i class="fa-solid fa-handshake"></i></h1>
+                <h2>Professional & Reliable</h2>
+            </div>
+            <div class="feature-card color3">
+                <h1><i class="fas fa-face-smile-beam"></i></h1>
+                <h2>Your Satisfaction Is Guaranteed</h2>
+            </div>
+        </div>
     </section>
+
 
     <!-- Showcase Section -->
     <section id="showcase" class="showcase">
@@ -118,9 +154,9 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-            <h3>Get A Quote Online</h3>
-            <p class="contact-subtitle">No obligations - it's free!</p>
+        <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+            <h3 id="contact-form-title">Get A Quote Online</h3>
+            <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
@@ -142,21 +178,24 @@
             <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
             <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-            <button type="submit">Send Message</button>
+            <button id="contact-submit-btn" type="submit">Send Message</button>
         </form>
 
-        <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-                class="fa-solid fa-minus"></i></h2>
+        <h2 id="contact-section-title">
+            <i class="fa-solid fa-minus"></i> CONTACT
+            <span class="highlight-keyword"> US</span>
+            <i class="fa-solid fa-minus"></i>
+        </h2>
 
         <div class="contact-info-row">
-            <a class="contact-box" href="tel:4036356840">
-                <h4><i class="fas fa-phone"></i></h4>
-                <p>(403) 635 6840</p>
+            <a class="contact-box" id="contact-box" href="tel:4036356840">
+                <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+                <p id="contact-text">(403) 635 6840</p>
             </a>
 
-            <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-                <h4><i class="fas fa-envelope"></i></h4>
-                <p>aerohomerenovations@gmail.com</p>
+            <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+                <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+                <p id="contact-text">aerohomerenovations@gmail.com</p>
             </a>
         </div>
     </section>

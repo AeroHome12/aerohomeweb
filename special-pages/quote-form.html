@@ -4,14 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Get a free quote now - Aero Home™ Company</title>
-    <meta name="description"
-        content="Need a quote for that yard maintenance, fan installation, or attic insulation? Click here now">
-    <meta name="keywords"
-        content="landscaping, renovations, drywall, painting, Lethbridge, handyman, Calgary, garden, cleanup">
 
+    <title>Get a Free Quote - Aero Home™ Company | Lethbridge, Alberta</title>
+
+    <meta name="description"
+        content="Request a free quote from Aero Home™ Company today! Whether it’s yard maintenance, flooring, painting, or fan installation — we provide reliable home services across Lethbridge, Alberta." />
+
+    <meta name="keywords"
+        content="Aero Home quote, free estimate Lethbridge, home renovation quote, landscaping estimate, handyman pricing, renovation cost, drywall quote, painting estimate, installation quote, Aero Home Company, Lethbridge home services" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Aero Home Company" />
+
+    <!-- Social / Open Graph -->
+    <meta property="og:title" content="Request a Free Quote | Aero Home™ Company" />
+    <meta property="og:description"
+        content="Get your free estimate today from Aero Home™ — your trusted team for home renovations, landscaping, and handyman services in Lethbridge." />
+    <meta property="og:image" content="/images/quote-hero.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://aerohome.ca/special-pages/quote-form.html" />
+    <meta property="og:site_name" content="Aero Home™" />
+
+    <!-- Styles & Assets -->
     <link rel="stylesheet" href="/special-pages/quote-form-style.css" />
-    <link rel="icon" type="image/x-icon" href="images/AeroLogo.ico" />
+    <link rel="icon" type="image/x-icon" href="/images/AeroLogo.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap" rel="stylesheet" />
 </head>
@@ -33,9 +49,9 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-            <h3>Get A Quote Online</h3>
-            <p class="contact-subtitle">No obligations - it's free!</p>
+        <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+            <h3 id="contact-form-title">Get A Quote Online</h3>
+            <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
@@ -57,25 +73,27 @@
             <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
             <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-            <button type="submit">Send Message</button>
+            <button id="contact-submit-btn" type="submit">Send Message</button>
         </form>
 
-        <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-                class="fa-solid fa-minus"></i></h2>
+        <h2 id="contact-section-title">
+            <i class="fa-solid fa-minus"></i> CONTACT
+            <span class="highlight-keyword"> US</span>
+            <i class="fa-solid fa-minus"></i>
+        </h2>
 
         <div class="contact-info-row">
-            <a class="contact-box" href="tel:4036356840">
-                <h4><i class="fas fa-phone"></i></h4>
-                <p>(403) 635 6840</p>
+            <a class="contact-box" id="contact-box" href="tel:4036356840">
+                <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+                <p id="contact-text">(403) 635 6840</p>
             </a>
 
-            <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-                <h4><i class="fas fa-envelope"></i></h4>
-                <p>aerohomerenovations@gmail.com</p>
+            <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+                <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+                <p id="contact-text">aerohomerenovations@gmail.com</p>
             </a>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer>
