@@ -230,7 +230,18 @@ html {
   position: relative;
   font-weight: bold;
   background: transparent;
-  color: #63b900;
+}
+
+.services-category-1 {
+  color: #7cda00;
+}
+
+.services-category-2 {
+  color: #b48100;
+}
+
+.services-category-3 {
+  color: #c1c1c1;
 }
 
 .services-row-one,
@@ -339,16 +350,16 @@ html {
   color: #026cd686;
 }
 
-#faucet-fix-card .pricing-icon i {
-  color: #02d6af86;
-}
-
 #recovery-drywall-card .pricing-icon i {
   color: #00000086;
 }
 
 #floor-install-card .pricing-icon i {
   color: #76470086;
+}
+
+#leak-fix-card .pricing-icon i {
+  color: #02d6af86;
 }
 
 /* MISSION SECTION */
@@ -617,7 +628,7 @@ footer .social-icon:hover {
 
   .promo-popup {
     width: 25vw;
-    height: 40vh;
+    height: 55vh;
     border-radius: 2vw;
     padding: 3vh 1.5vw;
     text-align: center;
@@ -633,6 +644,7 @@ footer .social-icon:hover {
 
   .promo-popup p {
     font-size: 1.3vw;
+    margin-bottom: 2vh;
   }
 
   .button-wrapper {
@@ -689,7 +701,7 @@ footer .social-icon:hover {
   /* HERO */
   .hero {
     position: relative;
-    padding: 10vh 1%;
+    padding: 15vh 1%;
     text-align: center;
   }
 
@@ -1110,9 +1122,9 @@ footer .social-icon:hover {
 
   .promo-popup {
     width: 30vw;
-    height: 45vh;
+    height: 55vh;
     border-radius: 2vw;
-    padding: 3vh 1.5vw;
+    padding: 3vh 2vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -1126,6 +1138,7 @@ footer .social-icon:hover {
 
   .promo-popup p {
     font-size: 1.6vw;
+    margin-bottom: 2vh;
   }
 
   .button-wrapper {
@@ -1590,8 +1603,8 @@ footer .social-icon:hover {
   }
 
   .promo-popup {
-    width: 80vw;
-    height: 60vh;
+    width: 70vw;
+    height: 55vh;
     border-radius: 2vw;
     padding: 3vh 5vw;
     text-align: center;
@@ -1601,12 +1614,13 @@ footer .social-icon:hover {
   }
 
   .promo-popup h2 {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-bottom: 1vh;
   }
 
   .promo-popup p {
-    font-size: 4.5vw;
+    font-size: 3.5vw;
+    margin-bottom: 2vh;
   }
 
   .button-wrapper {
@@ -1750,18 +1764,6 @@ footer .social-icon:hover {
     margin-top: 6vh;
     margin-bottom: 4vh;
     letter-spacing: 1vw;
-  }
-
-  .services-category-1 {
-    color: #7cda00;
-  }
-
-  .services-category-2 {
-    color: #b48100;
-  }
-
-  .services-category-3 {
-    color: #ffffff;
   }
 
   .services-row-one,
@@ -2102,7 +2104,7 @@ footer .social-icon:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -2111,7 +2113,7 @@ footer .social-icon:hover {
 
   .promo-popup {
     width: 80vw;
-    height: 40vh;
+    height: 50vh;
     border-radius: 2vw;
     padding: 3vh 5vw;
     text-align: center;
@@ -2127,6 +2129,7 @@ footer .social-icon:hover {
 
   .promo-popup p {
     font-size: 4.5vw;
+    margin-bottom: 2vh;
   }
 
   .button-wrapper {
@@ -2270,18 +2273,6 @@ footer .social-icon:hover {
     margin-top: 6vh;
     margin-bottom: 4vh;
     letter-spacing: 1vw;
-  }
-
-  .services-category-1 {
-    color: #7cda00;
-  }
-
-  .services-category-2 {
-    color: #b48100;
-  }
-
-  .services-category-3 {
-    color: #ffffff;
   }
 
   .services-row-one,

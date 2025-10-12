@@ -83,14 +83,14 @@
       </div>
 
       <div class="showcase-row-2">
+        <div class="showcase-image">
+          <img src="/service-pages/showcase-pages-images/landscape-row2.webp" alt="Showcase Image 2">
+        </div>
         <div class="showcase-text">
           <h3>EXPERIENCED & TRADITIONAL</h3>
           <p>
             While landscaping using proven ways and common design, we never lack new ways to bring your project to life.
           </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/service-pages/showcase-pages-images/landscape-row2.webp" alt="Showcase Image 2">
         </div>
       </div>
 
@@ -113,11 +113,11 @@
     <h1 class="faq-section-title"><i class="fa-solid fa-minus"></i> FREQUENTLY ASKED <span
         class="highlight-keyword">QUESTIONS</span> <i class="fa-solid fa-minus"></i></h1>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>How is gravel laid?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Laying gravel is an easy, low maintenance way to make spaces look better. Steps:
           <br><br>
@@ -132,11 +132,11 @@
       </div>
     </details>
 
-    <details class="faq-card-2">
-      <summary class="faq-label-2">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>About Packages & pricing
       </summary>
-      <div class="faq-content-2">
+      <div class="faq-content">
         <p>
           A: We have a few basic packages for one-time services, such as mowing, gravel, or home repair and can
           customize
@@ -150,12 +150,12 @@
       </div>
     </details>
 
-    <details class="faq-card-3">
-      <summary class="faq-label-3">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you offer seasonal landscaping services (spring/fall cleanup, snow
         removal, etc.)?
       </summary>
-      <div class="faq-content-3">
+      <div class="faq-content">
         <p>
           A: Yes, we provide a full range of seasonal services to keep your property looking its best year-round.
           In the spring and fall, we offer cleanup services such as leaf removal, pruning, garden bed preparation,
@@ -166,11 +166,11 @@
       </div>
     </details>
 
-    <details class="faq-card-4">
-      <summary class="faq-label-4">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What happens if it rains during my scheduled project?
       </summary>
-      <div class="faq-content-4">
+      <div class="faq-content">
         <p>
           A: Safety and quality are our top priorities. If the weather prevents us from working safely or
           could compromise the results, we’ll pause the project and reschedule as soon as conditions improve.
@@ -180,11 +180,11 @@
       </div>
     </details>
 
-    <details class="faq-card-5">
-      <summary class="faq-label-5">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you serve my area?
       </summary>
-      <div class="faq-content-5">
+      <div class="faq-content">
         <p>
           A: Yes, we proudly provide landscaping services in Lethbridge and the surrounding area. Whether you’re
           in the city or nearby communities, our team is ready to help with everything from landscape design and
@@ -194,11 +194,11 @@
       </div>
     </details>
 
-    <details class="faq-card-6">
-      <summary class="faq-label-6">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What are the benefits of adding mulch to my garden beds?
       </summary>
-      <div class="faq-content-6">
+      <div class="faq-content">
         <p>
           A: Mulch does much more than just make your garden look tidy — it’s a powerful tool for plant health.
           A good mulch layer helps retain soil moisture (especially valuable in Lethbridge’s hot, dry summers),
@@ -212,9 +212,9 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-      <h3>Get A Quote Online</h3>
-      <p class="contact-subtitle">No obligations - it's free!</p>
+    <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <h3 id="contact-form-title">Get A Quote Online</h3>
+      <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -236,21 +236,24 @@
       <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
       <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-      <button type="submit">Send Message</button>
+      <button id="contact-submit-btn" type="submit">Send Message</button>
     </form>
 
-    <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-        class="fa-solid fa-minus"></i></h2>
+    <h2 id="contact-section-title">
+      <i class="fa-solid fa-minus"></i> CONTACT
+      <span class="highlight-keyword"> US</span>
+      <i class="fa-solid fa-minus"></i>
+    </h2>
 
     <div class="contact-info-row">
-      <a class="contact-box" href="tel:4036356840">
-        <h4><i class="fas fa-phone"></i></h4>
-        <p>(403) 635 6840</p>
+      <a class="contact-box" id="contact-box" href="tel:4036356840">
+        <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+        <p id="contact-text">(403) 635 6840</p>
       </a>
 
-      <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-        <h4><i class="fas fa-envelope"></i></h4>
-        <p>aerohomerenovations@gmail.com</p>
+      <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+        <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+        <p id="contact-text">aerohomerenovations@gmail.com</p>
       </a>
     </div>
   </section>
@@ -273,3 +276,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
+</html>

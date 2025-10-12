@@ -84,15 +84,15 @@
       </div>
 
       <div class="showcase-row-2">
+        <div class="showcase-image">
+          <img src="/service-pages/showcase-pages-images/yard-row2.webp" alt="Showcase Image 2">
+        </div>
         <div class="showcase-text">
           <h3>FAST & FRIENDLY</h3>
           <p>
             Our consistency, coupled with a drive for customer service, keeps our clients coming back. Discover what it
             is like to be served right.
           </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/service-pages/showcase-pages-images/yard-row2.webp" alt="Showcase Image 2">
         </div>
       </div>
 
@@ -116,11 +116,11 @@
     <h1 class="faq-section-title"><i class="fa-solid fa-minus"></i> FREQUENTLY ASKED <span
         class="highlight-keyword">QUESTIONS</span> <i class="fa-solid fa-minus"></i></h1>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What’s included in your yard work services?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Our yard work services cover all the essentials to keep your property neat, healthy, and enjoyable.
           This can include lawn mowing, edging along sidewalks and driveways, trimming shrubs, weeding garden beds,
@@ -132,11 +132,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Can you haul away old debris, branches, or junk from my yard?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes — we provide hauling and removal services for yard waste such as branches, leaves, grass clippings,
           and general debris. If you’re cleaning up after a storm, trimming trees, or tackling an overgrown yard,
@@ -148,11 +148,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>How often should my lawn be aerated?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: In Lethbridge, most lawns benefit from aeration once a year, usually in the spring or fall.
           Aeration relieves soil compaction, improves water and nutrient absorption, and helps roots grow
@@ -164,11 +164,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What does a typical spring yard cleanup include?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: A spring cleanup is all about giving your yard a fresh start after winter. Our service usually includes
           raking up leftover leaves and debris, power raking or dethatching the lawn to remove dead grass, edging
@@ -180,11 +180,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you clean gutters as part of yard maintenance?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes — gutter cleaning can be added to your yard maintenance service. Keeping gutters clear of leaves,
           twigs, and debris is important to prevent water damage, foundation issues, and overflow into your yard.
@@ -195,11 +195,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you remove and haul away all yard waste?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes — all of our yard work services include cleanup and hauling of debris. Whether it’s grass clippings,
           leaves, branches, or other organic waste, we make sure your property is left clean and ready to enjoy.
@@ -213,9 +213,9 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-      <h3>Get A Quote Online</h3>
-      <p class="contact-subtitle">No obligations - it's free!</p>
+    <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <h3 id="contact-form-title">Get A Quote Online</h3>
+      <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -237,21 +237,24 @@
       <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
       <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-      <button type="submit">Send Message</button>
+      <button id="contact-submit-btn" type="submit">Send Message</button>
     </form>
 
-    <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-        class="fa-solid fa-minus"></i></h2>
+    <h2 id="contact-section-title">
+      <i class="fa-solid fa-minus"></i> CONTACT
+      <span class="highlight-keyword"> US</span>
+      <i class="fa-solid fa-minus"></i>
+    </h2>
 
     <div class="contact-info-row">
-      <a class="contact-box" href="tel:4036356840">
-        <h4><i class="fas fa-phone"></i></h4>
-        <p>(403) 635 6840</p>
+      <a class="contact-box" id="contact-box" href="tel:4036356840">
+        <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+        <p id="contact-text">(403) 635 6840</p>
       </a>
 
-      <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-        <h4><i class="fas fa-envelope"></i></h4>
-        <p>aerohomerenovations@gmail.com</p>
+      <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+        <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+        <p id="contact-text">aerohomerenovations@gmail.com</p>
       </a>
     </div>
   </section>
@@ -274,3 +277,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
+</html>

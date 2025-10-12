@@ -83,15 +83,15 @@
       </div>
 
       <div class="showcase-row-2">
+        <div class="showcase-image">
+          <img src="/service-pages/showcase-pages-images/flooring-row2.webp" alt="Showcase Image 2">
+        </div>
         <div class="showcase-text">
           <h3>FAST & FRIENDLY</h3>
           <p>
             Our consistency, coupled with a drive for customer service, keeps our clients coming back. Discover what it
             is like to be served right.
           </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/service-pages/showcase-pages-images/flooring-row2.webp" alt="Showcase Image 2">
         </div>
       </div>
 
@@ -115,11 +115,11 @@
     <h1 class="faq-section-title"><i class="fa-solid fa-minus"></i> FREQUENTLY ASKED <span
         class="highlight-keyword">QUESTIONS</span> <i class="fa-solid fa-minus"></i></h1>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What types of home installations do you offer?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: We install a wide range of household fixtures — from ceiling fans, light fixtures, and chandeliers to TVs,
           wall mounts, kitchen appliances, bathroom hardware, and more. We also handle smart home device setups, garage
@@ -129,11 +129,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Can you mount TVs and sound systems?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Absolutely. We securely mount TVs on drywall, brick, or stone surfaces, hiding cords where possible for a
           clean, modern look. We also install wall-mounted soundbars and surround-sound systems, ensuring everything
@@ -142,11 +142,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Can you replace bathroom or kitchen fixtures?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes — we can install faucets, sinks, showerheads, towel bars, and other fixtures. We ensure all
           connections are tight and leak-free, and we can also assist with sealing or caulking to maintain a
@@ -155,11 +155,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What should I do before an installation appointment?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Please clear the work area of personal items and furniture where possible. If it’s an electrical or
           plumbing install, ensure we have access to the breaker panel or shutoff valve. We’ll take care of the rest,
@@ -168,11 +168,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Can you install wood flooring over existing floors?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: In many cases, yes — engineered or laminate wood flooring can be installed over existing tile, vinyl, or
           concrete as long as the surface is clean, level, and stable. We’ll inspect your current floor first to make
@@ -182,11 +182,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What types of wood flooring do you install?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: We install a wide range of wood flooring options, including solid hardwood, engineered wood, and laminate.
           Solid hardwood offers timeless beauty and can be refinished multiple times, while engineered wood is ideal
@@ -200,9 +200,9 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-      <h3>Get A Quote Online</h3>
-      <p class="contact-subtitle">No obligations - it's free!</p>
+    <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <h3 id="contact-form-title">Get A Quote Online</h3>
+      <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -224,21 +224,24 @@
       <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
       <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-      <button type="submit">Send Message</button>
+      <button id="contact-submit-btn" type="submit">Send Message</button>
     </form>
 
-    <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-        class="fa-solid fa-minus"></i></h2>
+    <h2 id="contact-section-title">
+      <i class="fa-solid fa-minus"></i> CONTACT
+      <span class="highlight-keyword"> US</span>
+      <i class="fa-solid fa-minus"></i>
+    </h2>
 
     <div class="contact-info-row">
-      <a class="contact-box" href="tel:4036356840">
-        <h4><i class="fas fa-phone"></i></h4>
-        <p>(403) 635 6840</p>
+      <a class="contact-box" id="contact-box" href="tel:4036356840">
+        <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+        <p id="contact-text">(403) 635 6840</p>
       </a>
 
-      <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-        <h4><i class="fas fa-envelope"></i></h4>
-        <p>aerohomerenovations@gmail.com</p>
+      <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+        <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+        <p id="contact-text">aerohomerenovations@gmail.com</p>
       </a>
     </div>
   </section>
@@ -261,3 +264,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
+</html>

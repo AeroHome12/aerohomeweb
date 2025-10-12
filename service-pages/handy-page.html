@@ -84,15 +84,15 @@
       </div>
 
       <div class="showcase-row-2">
+        <div class="showcase-image">
+          <img src="/service-pages/showcase-pages-images/handy-row2.webp" alt="Showcase Image 2">
+        </div>
         <div class="showcase-text">
           <h3>SKILL BUILT ON EXPERIENCE</h3>
           <p>
             We like to take pride of our work diversity over the years, enabling us to serve you better in many more
             ways. If it's in your house and has a problem, we have the solution!
           </p>
-        </div>
-        <div class="showcase-image">
-          <img src="/service-pages/showcase-pages-images/handy-row2.webp" alt="Showcase Image 2">
         </div>
       </div>
 
@@ -116,11 +116,11 @@
     <h1 class="faq-section-title"><i class="fa-solid fa-minus"></i> FREQUENTLY ASKED <span
         class="highlight-keyword">QUESTIONS</span> <i class="fa-solid fa-minus"></i></h1>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>What types of handyman services do you offer?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: We provide a wide range of home repair, installation, and maintenance services — everything from fixing
           drywall and leaky faucets to mounting TVs, installing shelves, repairing fences, and replacing light
@@ -130,11 +130,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you handle both small repairs and larger projects?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes, we do! No job is too small. Whether it’s tightening a door hinge, or repairing drywall we can help.
           For larger projects, we coordinate the work efficiently and provide transparent quotes, so you know exactly
@@ -144,11 +144,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you serve residential, commercial, or both?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: We serve both! We work with homeowners, landlords, and property managers for residential jobs, as well as
           small businesses that need maintenance or installations in offices and retail spaces.
@@ -156,11 +156,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Can you assemble furniture or exercise equipment?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Definitely! We assemble furniture, gym machines, outdoor playsets, office desks, and more. We handle the
           tools,
@@ -169,11 +169,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>Do you handle minor plumbing or electrical installations?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: Yes, we can handle simple replacements such as faucets, showerheads, outlets, switches, and light fixtures.
           For
@@ -184,11 +184,11 @@
       </div>
     </details>
 
-    <details class="faq-card-1">
-      <summary class="faq-label-1">
+    <details class="faq-card">
+      <summary class="faq-label">
         <i class="fas fa-arrow-right-long"></i>How do I book a handyman appointment?
       </summary>
-      <div class="faq-content-1">
+      <div class="faq-content">
         <p>
           A: You can call, text, or fill out our online booking form. We’ll discuss your project details, provide an
           estimate,
@@ -201,9 +201,9 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <form action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
-      <h3>Get A Quote Online</h3>
-      <p class="contact-subtitle">No obligations - it's free!</p>
+    <form id="contact-form" action="https://formsubmit.co/aerohomerenovations@gmail.com" method="POST">
+      <h3 id="contact-form-title">Get A Quote Online</h3>
+      <p id="contact-form-subtitle" class="contact-subtitle">No obligations - it's free!</p>
 
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -225,21 +225,24 @@
       <input type="hidden" name="_subject" value="New Quote Request from aerohome.ca" />
       <input type="hidden" name="_next" value="https://aerohome.ca/thank-pages/quote-thank.html" />
 
-      <button type="submit">Send Message</button>
+      <button id="contact-submit-btn" type="submit">Send Message</button>
     </form>
 
-    <h2><i class="fa-solid fa-minus"></i> CONTACT<span class="highlight-keyword"> US</span> <i
-        class="fa-solid fa-minus"></i></h2>
+    <h2 id="contact-section-title">
+      <i class="fa-solid fa-minus"></i> CONTACT
+      <span class="highlight-keyword"> US</span>
+      <i class="fa-solid fa-minus"></i>
+    </h2>
 
     <div class="contact-info-row">
-      <a class="contact-box" href="tel:4036356840">
-        <h4><i class="fas fa-phone"></i></h4>
-        <p>(403) 635 6840</p>
+      <a class="contact-box" id="contact-box" href="tel:4036356840">
+        <h4 id="contact-title"><i class="fas fa-phone"></i></h4>
+        <p id="contact-text">(403) 635 6840</p>
       </a>
 
-      <a class="contact-box" href="mailto:aerohomerenovations@gmail.com">
-        <h4><i class="fas fa-envelope"></i></h4>
-        <p>aerohomerenovations@gmail.com</p>
+      <a class="contact-box" id="contact-box" href="mailto:aerohomerenovations@gmail.com">
+        <h4 id="contact-title"><i class="fas fa-envelope"></i></h4>
+        <p id="contact-text">aerohomerenovations@gmail.com</p>
       </a>
     </div>
   </section>
@@ -262,3 +265,5 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
+</html>
