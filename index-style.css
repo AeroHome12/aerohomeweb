@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
 }
 
 body {
@@ -59,6 +60,7 @@ html {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .close-btn {
@@ -66,6 +68,7 @@ html {
   color: #333;
   border: none;
   cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
 }
 
 .promo-popup-overlay.hidden {
@@ -362,6 +365,66 @@ html {
   color: #02d6af86;
 }
 
+/* TRUST SECTION */
+.trust-section {
+  position: relative;
+  background: #f4f4f4;
+  text-align: center;
+  padding: 4vh 6vw;
+}
+
+.trust-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3vw;
+  color: #000000;
+  margin-bottom: 4vh;
+  letter-spacing: 0.5vw;
+}
+
+.trust-container {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  flex-wrap: wrap;
+}
+
+.trust-card {
+  background: transparent;
+  text-align: center;
+  padding: 2vh 2vw;
+  border-radius: 1vw;
+  transition: transform 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.trust-card:hover {
+  transform: translateY(-0.5vh);
+}
+
+.trust-header {
+  margin-bottom: 2vh;
+}
+
+.trust-header i {
+  font-size: 4vw;
+  color: #df9100;
+  transition: color 0.3s ease;
+}
+
+.trust-card:hover .trust-header i {
+  color: #ffa500;
+}
+
+.trust-card-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.5vw;
+  color: #000000;
+  font-weight: bold;
+  margin: 0;
+}
+
 /* MISSION SECTION */
 .mission {
   position: relative;
@@ -462,6 +525,37 @@ html {
   transition: transform 0.3s ease;
 }
 
+/* Lazy loading styles */
+.lazy-load {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy-load.loaded {
+  opacity: 1;
+}
+
+.lazy-load::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.lazy-load.loaded::before {
+  display: none;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* CONTACT SECTION */
 #contact {
   position: relative;
@@ -519,6 +613,7 @@ html {
   position: relative;
   width: 100%;
   transition: border-color 0.2s;
+  font-family: 'Varela Round', sans-serif;
 }
 
 #contact-form input:focus,
@@ -532,7 +627,7 @@ html {
   border: none;
   background-color: #fff;
   color: #000;
-  font-family: inherit;
+  font-family: 'Varela Round', sans-serif;
   appearance: none;
   background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
@@ -546,6 +641,7 @@ html {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Varela Round', sans-serif;
 }
 
 #contact-submit-btn:hover {
@@ -864,6 +960,34 @@ footer .social-icon:hover {
     margin-top: 2vh;
     margin-bottom: 1vh;
     letter-spacing: 0.1vw;
+  }
+
+  /* TRUST */
+  .trust-section {
+    padding: 4vh 6vw;
+  }
+
+  .trust-title {
+    font-size: 3vw;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .trust-container {
+    gap: 4vw;
+  }
+
+  .trust-card {
+    padding: 2vh 2vw;
+    border-radius: 1vw;
+  }
+
+  .trust-header i {
+    font-size: 4vw;
+  }
+
+  .trust-card-title {
+    font-size: 1.5vw;
   }
 
   /* MISSION */
@@ -1346,6 +1470,34 @@ footer .social-icon:hover {
     font-size: 2.5vw;
     margin-top: 0.5vh;
     margin-bottom: 2vh;
+  }
+
+  /* TRUST */
+  .trust-section {
+    padding: 4vh 2vw;
+  }
+
+  .trust-title {
+    font-size: 3.5vw;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .trust-container {
+    gap: 3vw;
+  }
+
+  .trust-card {
+    padding: 2vh 1.5vw;
+    border-radius: 1vw;
+  }
+
+  .trust-header i {
+    font-size: 4.5vw;
+  }
+
+  .trust-card-title {
+    font-size: 1.8vw;
   }
 
   /* MISSION */
@@ -1856,6 +2008,35 @@ footer .social-icon:hover {
     letter-spacing: 0.1vw;
   }
 
+  /* TRUST */
+  .trust-section {
+    padding: 4vh 4vw;
+  }
+
+  .trust-title {
+    font-size: 6vw;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .trust-container {
+    gap: 2vw;
+  }
+
+  .trust-card {
+    padding: 2vh 1vw;
+    border-radius: 2vw;
+    min-width: 150px;
+  }
+
+  .trust-header i {
+    font-size: 8vw;
+  }
+
+  .trust-card-title {
+    font-size: 3vw;
+  }
+
   /* MISSION SECTION */
   .mission {
     padding: 2vh 10vw;
@@ -2345,6 +2526,38 @@ footer .social-icon:hover {
   .pricing-title {
     font-size: 4vw;
     margin-top: 0vh;
+  }
+
+  /* TRUST */
+  .trust-section {
+    padding: 4vh 4vw;
+  }
+
+  .trust-title {
+    font-size: 6vw;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .trust-container {
+    gap: 2vw;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trust-card {
+    padding: 2vh 1vw;
+    border-radius: 2vw;
+    min-width: 200px;
+    max-width: 80vw;
+  }
+
+  .trust-header i {
+    font-size: 8vw;
+  }
+
+  .trust-card-title {
+    font-size: 4vw;
   }
 
   /* MISSION SECTION */
