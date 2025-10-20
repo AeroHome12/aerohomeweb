@@ -209,30 +209,32 @@ html {
 
 /* SERVICES SECTION */
 .services {
-  position: relative;
-  text-align: center;
   background: #e7e7e7;
-  color: #000000;
+  color: #000;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
 }
 
-.services-title,
+.services-title {
+  text-align: center;
+}
+
 .services-subtitle {
-  position: relative;
-  font-family: 'Varela Round', sans-serif;
-  color: #000000;
+  text-align: center;
 }
 
 .highlight-keyword {
-  color: #FFA500;
+  color: #ffa500;
   -webkit-text-stroke: 0.05vw #333;
 }
 
+/* CATEGORY HEADINGS */
 .services-category-1,
 .services-category-2,
 .services-category-3 {
-  position: relative;
   font-weight: bold;
   background: transparent;
+  letter-spacing: 0.3vw;
 }
 
 .services-category-1 {
@@ -247,39 +249,37 @@ html {
   color: #c1c1c1;
 }
 
-.services-row-one,
-.services-row-two,
-.services-row-three {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+/* SERVICE CARDS */
+.service-card {
+  background: #fff;
+  border-radius: 1vw;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0.6vw 1.4vw rgba(0, 0, 0, 0.15);
 }
 
-.service-card {
-  text-decoration: none;
-  transition: box-shadow 0.3s ease;
+.service-card:hover {
+  box-shadow: 0 1.4vw 2.4vw rgba(42, 42, 42, 0.4);
 }
 
 .service-image {
   object-fit: cover;
-  border: 0.2vw solid #555;
-  background-color: white;
+  border-bottom: 0.3vw solid #555;
+  background-color: #fff;
 }
 
 .service-description {
-  color: #ffffff !important;
   background-color: #df9100;
+  color: #fff !important;
   font-weight: bold;
-  line-height: 1.5;
+  letter-spacing: 0.05em;
+  border-top: 0.2vw solid #b46e00;
 }
 
-.learn-more {
-  color: #555;
-}
-
-.service-card:hover {
-  transform: translateY(-0.3vh);
-  box-shadow: 0 3vw 3vw rgb(42, 42, 42);
+.service-details {
+  color: #333;
+  background: #fff;
 }
 
 /* PRICING SECTION */
@@ -294,7 +294,7 @@ html {
 .pricing-category {
   position: relative;
   color: #000000;
-  background: #ffffff;
+  background: transparent;
 }
 
 .pricing-card {
@@ -368,35 +368,28 @@ html {
 /* TRUST SECTION */
 .trust-section {
   position: relative;
-  background: #f4f4f4;
+  background: #ffffff;
   text-align: center;
-  padding: 4vh 6vw;
 }
 
 .trust-title {
   font-family: 'Varela Round', sans-serif;
   font-size: 3vw;
   color: #000000;
-  margin-bottom: 4vh;
-  letter-spacing: 0.5vw;
 }
 
 .trust-container {
   display: flex;
   justify-content: center;
-  gap: 4vw;
   flex-wrap: wrap;
 }
 
 .trust-card {
   background: transparent;
   text-align: center;
-  padding: 2vh 2vw;
   border-radius: 1vw;
   transition: transform 0.3s ease;
   flex: 1;
-  min-width: 200px;
-  max-width: 300px;
 }
 
 .trust-card:hover {
@@ -408,7 +401,6 @@ html {
 }
 
 .trust-header i {
-  font-size: 4vw;
   color: #df9100;
   transition: color 0.3s ease;
 }
@@ -419,7 +411,6 @@ html {
 
 .trust-card-title {
   font-family: 'Varela Round', sans-serif;
-  font-size: 1.5vw;
   color: #000000;
   font-weight: bold;
   margin: 0;
@@ -552,8 +543,13 @@ html {
 }
 
 @keyframes loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* CONTACT SECTION */
@@ -850,61 +846,70 @@ footer .social-icon:hover {
     line-height: 1;
   }
 
-  /* SERVICES */
+  /* SERVICES SECTION */
   .services {
+    position: relative;
     padding: 4vh 6vw;
-    margin-bottom: 2vh;
-    text-align: center;
   }
 
   .services-title {
     font-size: 3vw;
+    margin-bottom: 2vh;
+    letter-spacing: 0.5vw;
   }
 
   .services-subtitle {
     font-size: 2vw;
-    margin-top: 2vh;
   }
 
   .services-category-1,
   .services-category-2,
   .services-category-3 {
-    font-size: 1.7vw;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
-    letter-spacing: 0.4vw;
+    position: relative;
+    font-size: 1.8vw;
+    margin: 10vh 0 5vh;
   }
 
+  /* ROW STRUCTURE */
   .services-row-one,
   .services-row-two,
   .services-row-three {
     display: flex;
     justify-content: center;
-    gap: 6vw;
-    margin-bottom: 14vh;
     flex-wrap: wrap;
+    gap: 5vw;
+    margin-bottom: 0vh;
   }
 
+  /* CARD LAYOUT */
   .service-card {
-    width: 35vw;
-    height: 55vh;
-    margin-bottom: 5vh;
+    width: 34vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-0.4vw);
   }
 
   .service-image {
     width: 100%;
-    height: 100%;
-    padding: 0.4vw;
-    margin-top: 1vh;
+    height: 33vh;
   }
 
   .service-description {
-    font-size: 3.5vh;
-    line-height: 1.5;
+    width: 100%;
+    font-size: 1.4vw;
+    padding: 1vh 0;
+    text-align: center;
   }
 
-  .learn-more {
-    font-size: 1.2vw;
+  .service-details {
+    font-size: 1.05vw;
+    line-height: 1.5;
+    padding: 2vh 2vw 3vh;
+    text-align: center;
   }
 
   /* PRICING */
@@ -925,8 +930,8 @@ footer .social-icon:hover {
   }
 
   .pricing-card {
-    width: 20vw;
-    height: 40vh;
+    width: 25vw;
+    height: 35vh;
     margin-bottom: 4vh;
     text-align: center;
     display: flex;
@@ -960,34 +965,6 @@ footer .social-icon:hover {
     margin-top: 2vh;
     margin-bottom: 1vh;
     letter-spacing: 0.1vw;
-  }
-
-  /* TRUST */
-  .trust-section {
-    padding: 4vh 6vw;
-  }
-
-  .trust-title {
-    font-size: 3vw;
-    margin-bottom: 4vh;
-    letter-spacing: 0.5vw;
-  }
-
-  .trust-container {
-    gap: 4vw;
-  }
-
-  .trust-card {
-    padding: 2vh 2vw;
-    border-radius: 1vw;
-  }
-
-  .trust-header i {
-    font-size: 4vw;
-  }
-
-  .trust-card-title {
-    font-size: 1.5vw;
   }
 
   /* MISSION */
@@ -1029,6 +1006,36 @@ footer .social-icon:hover {
     max-width: 100%;
     font-size: 1.5vw;
     flex: 1;
+  }
+
+   /* TRUST */
+  .trust-section {
+    margin-top: 8vh;
+    border-radius: 6vw;
+    padding: 8vh 4vw;
+  }
+
+  .trust-title {
+    font-size: 3vw;
+    margin-bottom: 4vh;
+    letter-spacing: 0.5vw;
+  }
+
+  .trust-container {
+    gap: 4vw;
+  }
+
+  .trust-card {
+    padding: 2vh 2vw;
+    border-radius: 1vw;
+  }
+
+  .trust-header i {
+    font-size: 4vw;
+  }
+
+  .trust-card-title {
+    font-size: 1.5vw;
   }
 
   .mission-features {
@@ -1372,61 +1379,70 @@ footer .social-icon:hover {
     line-height: 1;
   }
 
-  /* SERVICES */
+  /* SERVICES SECTION */
   .services {
-    padding: 4vh 2vw;
-    margin-bottom: 2vh;
-    text-align: center;
+    position: relative;
+    padding: 4vh 6vw;
   }
 
   .services-title {
-    font-size: 3.5vw;
+    font-size: 3vw;
+    margin-bottom: 2vh;
+    letter-spacing: 0.5vw;
   }
 
   .services-subtitle {
     font-size: 2vw;
-    margin-top: 2vh;
   }
 
   .services-category-1,
   .services-category-2,
   .services-category-3 {
-    font-size: 2vw;
-    margin-top: 8vh;
-    margin-bottom: 3vh;
-    letter-spacing: 0.4vw;
+    position: relative;
+    font-size: 1.8vw;
+    margin: 6vh 0 5vh;
   }
 
+  /* ROW STRUCTURE */
   .services-row-one,
   .services-row-two,
   .services-row-three {
     display: flex;
     justify-content: center;
-    gap: 6vw;
-    margin-bottom: 14vh;
     flex-wrap: wrap;
+    gap: 5vw;
+    margin-bottom: 0vh;
   }
 
+  /* CARD LAYOUT */
   .service-card {
-    width: 35vw;
-    height: 50vh;
-    margin-bottom: 5vh;
+    width: 34vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-0.4vw);
   }
 
   .service-image {
     width: 100%;
-    height: 100%;
-    padding: 0.4vw;
-    margin-top: 1vh;
+    height: 33vh;
   }
 
   .service-description {
-    font-size: 3.5vh;
-    line-height: 1.5;
+    width: 100%;
+    font-size: 1.4vw;
+    padding: 1vh 0;
+    text-align: center;
   }
 
-  .learn-more {
-    font-size: 1.8vw;
+  .service-details {
+    font-size: 1.05vw;
+    line-height: 1.5;
+    padding: 2vh 2vw 3vh;
+    text-align: center;
   }
 
   /* PRICING */
@@ -1474,6 +1490,8 @@ footer .social-icon:hover {
 
   /* TRUST */
   .trust-section {
+    margin-top: 8vh;
+    border-radius: 6vw;
     padding: 4vh 2vw;
   }
 
@@ -1838,7 +1856,7 @@ footer .social-icon:hover {
   /* HERO */
   .hero {
     position: relative;
-    padding: 15vh 1%;
+    padding: 10vh 1%;
     text-align: center;
   }
 
@@ -1884,7 +1902,7 @@ footer .social-icon:hover {
   }
 
   .scroll-prompt {
-    margin-top: 10vh;
+    margin-top: 4vh;
   }
 
   .scroll-arrow {
@@ -1892,63 +1910,70 @@ footer .social-icon:hover {
     line-height: 1;
   }
 
-  /* SERVICES */
+  /* SERVICES SECTION */
   .services {
-    padding: 4vh 4vw;
-    margin-bottom: 3vh;
-    text-align: center;
+    position: relative;
+    padding: 4vh 6vw;
   }
 
   .services-title {
     font-size: 6vw;
+    margin-bottom: 2vh;
+    letter-spacing: 0.5vw;
   }
 
   .services-subtitle {
     font-size: 4vw;
-    margin-top: 2vh;
   }
 
   .services-category-1,
   .services-category-2,
   .services-category-3 {
-    background: #555;
-    font-size: 4vw;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
-    letter-spacing: 1vw;
+    position: relative;
+    font-size: 5vw;
+    margin: 5vh 0 5vh;
   }
 
+  /* ROW STRUCTURE */
   .services-row-one,
   .services-row-two,
   .services-row-three {
     display: flex;
     justify-content: center;
-    gap: 10vw;
-    margin-bottom: 10vh;
     flex-wrap: wrap;
+    gap: 10vw;
+    margin-bottom: 0vh;
   }
 
+  /* CARD LAYOUT */
   .service-card {
-    width: 75vw;
-    height: 35vh;
-    margin-bottom: 12vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-0.4vw);
   }
 
   .service-image {
     width: 100%;
-    height: 100%;
-    padding: 0.4vw;
-    margin-top: 1vh;
+    height: 33vh;
   }
 
   .service-description {
-    font-size: 3vh;
-    padding: 1vh 2vw;
-    line-height: 1.5;
+    width: 100%;
+    font-size: 3.2vw;
+    padding: 1vh 0;
+    text-align: center;
   }
 
-  .learn-more {
-    font-size: 3.5vw;
+  .service-details {
+    font-size: 2.5vw;
+    line-height: 1.5;
+    padding: 2vh 2vw 3vh;
+    text-align: center;
   }
 
   /* PRICING */
@@ -2010,6 +2035,8 @@ footer .social-icon:hover {
 
   /* TRUST */
   .trust-section {
+    margin-top: 4vh;
+    border-radius: 6vw;
     padding: 4vh 4vw;
   }
 
@@ -2430,63 +2457,83 @@ footer .social-icon:hover {
     line-height: 1;
   }
 
-  /* SERVICES */
+  /* SERVICES SECTION */
   .services {
-    padding: 4vh 4vw;
-    margin-bottom: 3vh;
-    text-align: center;
+    position: relative;
+    padding: 4vh 6vw;
   }
 
   .services-title {
     font-size: 6vw;
+    margin-bottom: 2vh;
+    letter-spacing: 0.5vw;
   }
 
   .services-subtitle {
     font-size: 4vw;
-    margin-top: 2vh;
   }
 
   .services-category-1,
   .services-category-2,
   .services-category-3 {
-    background: #555;
+    position: relative;
     font-size: 5vw;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
-    letter-spacing: 1vw;
+    margin: 5vh 0 5vh;
+    padding: 2vh 2vw;
   }
 
+  .services-category-1 {
+    background-color: #075a07;
+  }
+
+  .services-category-2 {
+    background-color: #412305;
+  }
+
+  .services-category-3 {
+    background-color: #323232;
+  }
+
+  /* ROW STRUCTURE */
   .services-row-one,
   .services-row-two,
   .services-row-three {
     display: flex;
     justify-content: center;
-    gap: 10vw;
-    margin-bottom: 10vh;
     flex-wrap: wrap;
+    gap: 10vw;
+    margin-bottom: 0vh;
   }
 
+  /* CARD LAYOUT */
   .service-card {
-    width: 65vw;
-    height: 30vh;
-    margin-bottom: 12vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card:hover {
+    transform: translateY(-0.4vw);
   }
 
   .service-image {
     width: 100%;
-    height: 100%;
-    padding: 0.4vw;
-    margin-top: 1vh;
+    height: 28vh;
   }
 
   .service-description {
-    font-size: 3vh;
-    padding: 1vh 1vw;
-    line-height: 1.5;
+    width: 100%;
+    font-size: 4vw;
+    padding: 1vh 0;
+    text-align: center;
   }
 
-  .learn-more {
-    font-size: 4vw;
+  .service-details {
+    font-size: 3.5vw;
+    line-height: 1.5;
+    padding: 2vh 2vw 3vh;
+    text-align: center;
   }
 
   /* PRICING */
@@ -2530,6 +2577,8 @@ footer .social-icon:hover {
 
   /* TRUST */
   .trust-section {
+    margin-top: 4vh;
+    border-radius: 6vw;
     padding: 4vh 4vw;
   }
 
@@ -2540,16 +2589,14 @@ footer .social-icon:hover {
   }
 
   .trust-container {
-    gap: 2vw;
+    gap: 4vw;
     flex-direction: column;
     align-items: center;
   }
 
   .trust-card {
     padding: 2vh 1vw;
-    border-radius: 2vw;
-    min-width: 200px;
-    max-width: 80vw;
+    width: 100%;
   }
 
   .trust-header i {

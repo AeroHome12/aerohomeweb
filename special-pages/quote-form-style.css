@@ -325,13 +325,13 @@ footer .social-icon:hover {
   footer {
     text-align: center;
     padding: 2vh 0;
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 
   footer .social-icons {
     display: flex;
     justify-content: center;
-    gap: 3vw;
+    gap: 1vw;
     margin-top: 1vh;
   }
 

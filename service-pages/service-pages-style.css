@@ -1465,7 +1465,7 @@ footer .social-icon:hover {
     font-family: 'Varela Round', sans-serif;
     font-style: italic;
     text-align: center;
-    font-size: 4vw;
+    font-size: 4.5vw;
     letter-spacing: 0.5vw;
     margin-bottom: 6vh;
   }
@@ -1515,7 +1515,7 @@ footer .social-icon:hover {
   .faq-section-title {
     font-family: 'Varela Round', sans-serif;
     text-align: center;
-    font-size: 4vw;
+    font-size: 4.5vw;
     margin-top: 2vh;
     margin-bottom: 5vh;
 
@@ -1532,8 +1532,8 @@ footer .social-icon:hover {
   .faq-label {
     font-family: 'Varela Round', sans-serif;
     display: block;
-    padding: 2vh 1vw;
-    font-size: 3vw;
+    padding: 2vh 3vw;
+    font-size: 4.5vw;
     font-weight: bold;
     cursor: pointer;
     user-select: none;
@@ -1541,7 +1541,7 @@ footer .social-icon:hover {
 
   .faq-content {
     padding: 2vh 3vw;
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   .faq-card[open] .faq-label {
