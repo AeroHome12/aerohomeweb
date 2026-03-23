@@ -1,0 +1,58 @@
+body {
+  opacity: 1 !important;
+  transform: none !important;
+  font-family: 'Varela Round', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  transition: opacity 0.8s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* TOP RIBBON */
+.top-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.2vh 0.8vw rgb(0, 0, 0);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.ribbon-label {
+  font-weight: bold;
+  color: #000000;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.ribbon-logo img {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.ribbon-buttons {
+  display: flex;
+}
+
+.ribbon-buttons a {
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+  font-weight: bolder;
+  transition: background 0.2s ease;
+}
+
+.ribbon-buttons a:hover {
+  background: #FFA500;
+  color: #ffffff;
+}
+
+.top-ribbon.hide {
+  transform: translateY(-100%);
+}

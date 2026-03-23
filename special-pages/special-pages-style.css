@@ -1,0 +1,1099 @@
+/* ================================
+   CSS VARIABLES
+   ================================ */
+:root {
+  --orange: #f0960a;
+  --orange-dark: #c97a00;
+  --orange-hover: #ffa826;
+  --dark: #111827;
+  --dark-mid: #1f2937;
+  --gray-bg: #f0f2f7;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+  --text-mid: #6b7280;
+  --border: #e2e8f0;
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  --card-shadow-h: 0 10px 36px rgba(0,0,0,0.20);
+  --radius: 12px;
+}
+
+/* ================================
+   BASE
+   ================================ */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  opacity: 1 !important;
+  transform: none !important;
+  font-family: 'Varela Round', sans-serif;
+  background: var(--gray-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  user-select: none;
+}
+
+html {
+  scroll-padding-top: 10vh;
+}
+
+/* ================================
+   TOP NAV
+   ================================ */
+.top-ribbon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7vh;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  gap: 1.5vw;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease;
+}
+
+.top-ribbon.hide {
+  transform: translateY(-100%);
+}
+
+.ribbon-logo img {
+  height: 5.5vh;
+  margin-top: 0.5vh;
+}
+
+.ribbon-label {
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: rgba(255,255,255,0.9);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+
+.ribbon-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.ribbon-buttons a {
+  text-decoration: none;
+  color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  font-size: 0.85vw;
+  letter-spacing: 0.05vw;
+  padding: 0.8vh 1vw;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.ribbon-buttons a:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
+
+.ribbon-buttons a.ribbon-cta {
+  background: var(--orange);
+  color: var(--white);
+  padding: 0.8vh 1.2vw;
+  border-radius: 20px;
+}
+
+.ribbon-buttons a.ribbon-cta:hover {
+  background: var(--orange-hover);
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 6px;
+  margin-left: auto;
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger-btn.active span:nth-child(2) { opacity: 0; width: 0; }
+.hamburger-btn.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ================================
+   HERO (About Us page)
+   ================================ */
+.hero {
+  background:
+    linear-gradient(145deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.62) 100%),
+    url('/images/about-us-page-hero.webp') no-repeat center / cover;
+  padding: 32vh 5%;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container h1 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 5.5vw;
+  font-weight: bold;
+  color: var(--white);
+  letter-spacing: 0.3vw;
+  line-height: 1.1;
+}
+
+/* ================================
+   PAGE HEADER (Quote / Pay pages)
+   ================================ */
+.page-header {
+  background: var(--dark);
+  padding: 14vh 5% 5vh;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-header h1 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 0.3vw;
+  display: inline-block;
+  position: relative;
+}
+
+.page-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.page-header p {
+  font-size: 1.1vw;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2vh;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================================
+   MISSION SECTION (About Us)
+   ================================ */
+.mission {
+  padding: 8vh 6vw;
+  background: var(--white);
+  text-align: center;
+}
+
+.mission-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.8vw;
+  letter-spacing: 0.3vw;
+  margin-bottom: 1vh;
+  display: inline-block;
+  position: relative;
+}
+
+.mission-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.mission-subtitle {
+  font-size: 1.15vw;
+  color: var(--text-mid);
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.mission-body {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  text-align: left;
+  margin-bottom: 6vh;
+  background: var(--gray-bg);
+  border-radius: var(--radius);
+  padding: 4vh 3vw;
+  box-shadow: var(--card-shadow);
+}
+
+.mission-image img {
+  width: 28vw;
+  height: 36vh;
+  object-fit: cover;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.mission-text {
+  font-size: 1.15vw;
+  color: var(--text-mid);
+  line-height: 1.8;
+  flex: 1;
+}
+
+/* Feature Cards */
+.mission-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 2vh;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3vh 2vw;
+  border-radius: var(--radius);
+  width: 16vw;
+  min-width: 140px;
+  box-shadow: var(--card-shadow);
+}
+
+.feature-icon {
+  font-size: 2vw;
+  margin-bottom: 1.5vh;
+}
+
+.feature-card h3 {
+  font-size: 0.9vw;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.feature-card.color1 { background: #fff7e6; color: #92400e; }
+.feature-card.color1 .feature-icon { color: var(--orange); }
+.feature-card.color2 { background: #ecfdf5; color: #065f46; }
+.feature-card.color2 .feature-icon { color: #10b981; }
+.feature-card.color3 { background: #eff6ff; color: #1e40af; }
+.feature-card.color3 .feature-icon { color: #3b82f6; }
+.feature-card.color4 { background: #f5f3ff; color: #4c1d95; }
+.feature-card.color4 .feature-icon { color: #8b5cf6; }
+.feature-card.color5 { background: #fff1f2; color: #881337; }
+.feature-card.color5 .feature-icon { color: #e11d48; }
+
+/* ================================
+   SHOWCASE SECTION (About Us)
+   ================================ */
+.showcase {
+  padding: 8vh 6vw;
+  background: var(--dark);
+  text-align: center;
+}
+
+.showcase-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.2vw;
+  letter-spacing: 0.3vw;
+  margin-bottom: 1vh;
+  display: inline-block;
+  position: relative;
+  color: var(--white);
+}
+
+.showcase-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.showcase-subtitle {
+  color: rgba(255,255,255,0.5);
+  margin-top: 2.5vh;
+  margin-bottom: 5vh;
+}
+
+.showcase-cards {
+  display: flex;
+  gap: 2vw;
+}
+
+.showcase-card {
+  flex: 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid var(--orange);
+}
+
+.showcase-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.90) 0%, rgba(0,0,0,0.38) 55%, rgba(0,0,0,0.10) 100%);
+  z-index: 1;
+}
+
+.showcase-card-1 { background-image: url('/service-pages/showcase-pages-images/about-us-row1.webp'); }
+.showcase-card-2 { background-image: url('/service-pages/showcase-pages-images/about-us-row2.webp'); }
+.showcase-card-3 { background-image: url('/service-pages/showcase-pages-images/about-us-row3.webp'); }
+
+.showcase-card-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: left;
+}
+
+.showcase-number {
+  display: block;
+  font-weight: bold;
+  color: var(--orange);
+  line-height: 1;
+  margin-bottom: 1vh;
+}
+
+.showcase-card-inner h3 {
+  color: var(--white);
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2vh;
+}
+
+.showcase-card-inner p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+}
+
+/* ================================
+   SERVICE AREA SECTION (About Us)
+   ================================ */
+.service-area {
+  padding: 8vh 6vw;
+  background: var(--gray-bg);
+  text-align: center;
+}
+
+.service-area-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 2.2vw;
+  letter-spacing: 0.3vw;
+  margin-bottom: 1vh;
+  display: inline-block;
+  position: relative;
+}
+
+.service-area-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.service-area-subtitle {
+  font-size: 1.1vw;
+  color: var(--text-mid);
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.service-area-body {
+  display: flex;
+  align-items: stretch;
+  gap: 4vw;
+  text-align: left;
+}
+
+.service-area-map {
+  flex: 3;
+  height: 380px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.service-area-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.service-area-list {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.service-area-list > p {
+  font-size: 1.05vw;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.service-area-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vh;
+}
+
+.service-area-list ul li {
+  font-size: 1vw;
+  color: var(--text-dark);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.service-area-list ul li i {
+  color: var(--orange);
+  font-size: 0.9vw;
+  flex-shrink: 0;
+}
+
+.home-base-tag {
+  background: var(--orange);
+  color: var(--white);
+  font-size: 0.65vw;
+  padding: 0.2vh 0.6vw;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-left: 0.4vw;
+  white-space: nowrap;
+}
+
+.service-area-cta {
+  font-size: 0.95vw;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.service-area-cta a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-area-cta a:hover { text-decoration: underline; }
+
+/* ================================
+   CONTACT SECTION
+   ================================ */
+.contact {
+  padding: 8vh 5vw;
+  background: var(--dark-mid);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contact-section-title {
+  font-size: 2.2vw;
+  letter-spacing: 0.3vw;
+  color: var(--white);
+  margin-bottom: 4vh;
+  display: inline-block;
+  position: relative;
+}
+
+#contact-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+#contact-form-title {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.8vw;
+  color: var(--white);
+  margin-bottom: 0.5vh;
+}
+
+.contact-subtitle,
+#contact-form-subtitle {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.1vw;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 3vh;
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 680px;
+  background: var(--dark);
+  padding: 5vh 4vw;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-bottom: 4vh;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 1.5vh 1.5vw;
+  font-size: 0.95vw;
+  font-family: 'Varela Round', sans-serif;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  color: var(--white);
+  transition: border-color 0.2s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: var(--orange);
+  outline: none;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+#contact-form textarea {
+  min-height: 12vh;
+  resize: vertical;
+}
+
+#contact-form select {
+  width: 100%;
+  padding: 1.5vh 1.5vw;
+  font-size: 0.95vw;
+  font-family: 'Varela Round', sans-serif;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  color: var(--white);
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1vw center;
+  background-size: 1.5vw;
+  transition: border-color 0.2s;
+}
+
+#contact-form select:focus {
+  border-color: var(--orange);
+  outline: none;
+}
+
+#contact-form select option {
+  background: var(--dark);
+  color: var(--white);
+}
+
+#contact-submit-btn {
+  padding: 2vh 2vw;
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  font-size: 1vw;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#contact-submit-btn:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+}
+
+.contact-info-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vw;
+  margin-top: 1vh;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  padding: 2.5vh 3vw;
+  border-radius: var(--radius);
+  min-width: 18vw;
+  color: rgba(255,255,255,0.85);
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-box:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(240,150,10,0.3);
+}
+
+.contact-box h4 {
+  font-size: 1.8vw;
+  margin-bottom: 1vh;
+}
+
+.contact-box p {
+  font-size: 0.9vw;
+  word-break: break-word;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+  position: relative;
+  opacity: 1 !important;
+  transform: none !important;
+  background: var(--dark);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 3vh 0;
+  font-size: 0.9vw;
+}
+
+footer .operation-hours { margin-top: 0; }
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 1.5vh;
+}
+
+footer .social-icon {
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.2vw;
+  transition: color 0.3s ease;
+}
+
+footer .social-icon:hover { color: var(--orange); }
+
+footer .copyright-note { margin-top: 1.5vh; }
+footer .footer-service-area { font-size: 0.8em; color: rgba(255,255,255,0.45); margin-top: 0.8vh; letter-spacing: 0.02em; }
+
+/* ================================
+   UTILITIES
+   ================================ */
+.highlight-keyword {
+  color: var(--orange);
+  -webkit-text-stroke: 0;
+}
+
+/* ================================
+   MEDIA QUERIES
+   ================================ */
+
+/* Desktop: 1281px+ */
+@media (min-width: 1281px) {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Varela Round', sans-serif; line-height: 1.6; }
+  html { scroll-padding-top: 10vh; }
+
+  .top-ribbon { height: 7vh; padding: 0 2vw; gap: 1.5vw; }
+  .ribbon-label { font-size: 1.1vw; }
+  .ribbon-logo img { height: 5.5vh; }
+  .ribbon-buttons a { font-size: 0.85vw; }
+
+  .hero { padding: 34vh 5%; }
+  .text-container h1 { font-size: 6vw; }
+
+  .page-header { padding: 14vh 5% 5vh; }
+  .page-header h1 { font-size: 3vw; }
+  .page-header p { font-size: 1.1vw; }
+
+  .mission { padding: 8vh 6vw; }
+  .mission-title { font-size: 2.8vw; }
+  .mission-subtitle { font-size: 1.15vw; }
+  .mission-image img { width: 28vw; height: 36vh; }
+  .mission-text { font-size: 1.15vw; }
+  .feature-card { width: 15vw; }
+  .feature-icon { font-size: 2vw; }
+  .feature-card h3 { font-size: 0.9vw; }
+
+  .showcase { padding: 8vh 6vw; }
+  .showcase-title { font-size: 2.2vw; }
+  .showcase-subtitle { font-size: 1.05vw; }
+  .showcase-card { min-height: 62vh; }
+  .showcase-card-inner { padding: 3vh 2vw; }
+  .showcase-number { font-size: 2.8vw; }
+  .showcase-card-inner h3 { font-size: 1.25vw; }
+  .showcase-card-inner p { font-size: 0.92vw; }
+
+  .contact { padding: 8vh 5vw; }
+  #contact-section-title { font-size: 2.2vw; }
+  #contact-form-title { font-size: 1.7vw; }
+  #contact-form-subtitle { font-size: 1vw; }
+  #contact-form input, #contact-form textarea { font-size: 0.9vw; }
+  #contact-form select { font-size: 0.9vw; }
+  #contact-submit-btn { font-size: 0.95vw; }
+  .contact-box { min-width: 16vw; }
+  .contact-box h4 { font-size: 1.8vw; }
+  .contact-box p { font-size: 0.85vw; }
+
+  .service-area { padding: 8vh 6vw; }
+  .service-area-title { font-size: 2.2vw; }
+  .service-area-subtitle { font-size: 1.1vw; }
+  .service-area-map { height: 380px; }
+  .service-area-list > p { font-size: 1.05vw; }
+  .service-area-list ul li { font-size: 1vw; }
+  .service-area-list ul li i { font-size: 0.9vw; }
+  .home-base-tag { font-size: 0.65vw; }
+  .service-area-cta { font-size: 0.95vw; }
+
+  footer { font-size: 0.9vw; }
+  footer .social-icon { font-size: 1.2vw; }
+}
+
+/* Laptop: 1025–1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Varela Round', sans-serif; line-height: 1.6; }
+  html { scroll-padding-top: 10vh; }
+
+  .top-ribbon { height: 7vh; padding: 0 2vw; }
+  .ribbon-label { font-size: 1.3vw; }
+  .ribbon-logo img { height: 5.5vh; }
+  .ribbon-buttons a { font-size: 1vw; }
+
+  .hero { padding: 32vh 5%; }
+  .text-container h1 { font-size: 7vw; }
+
+  .page-header { padding: 12vh 5% 4vh; }
+  .page-header h1 { font-size: 3.5vw; }
+  .page-header p { font-size: 1.3vw; }
+
+  .mission { padding: 7vh 5vw; }
+  .mission-title { font-size: 3vw; }
+  .mission-subtitle { font-size: 1.4vw; }
+  .mission-image img { width: 30vw; height: 34vh; }
+  .mission-text { font-size: 1.3vw; }
+  .feature-card { width: 17vw; }
+  .feature-icon { font-size: 2.2vw; }
+  .feature-card h3 { font-size: 1vw; }
+
+  .showcase { padding: 7vh 5vw; }
+  .showcase-title { font-size: 2.5vw; }
+  .showcase-subtitle { font-size: 1.2vw; }
+  .showcase-card { min-height: 58vh; }
+  .showcase-card-inner { padding: 3vh 2.2vw; }
+  .showcase-number { font-size: 3.2vw; }
+  .showcase-card-inner h3 { font-size: 1.5vw; }
+  .showcase-card-inner p { font-size: 1.1vw; }
+
+  .contact { padding: 7vh 4vw; }
+  #contact-section-title { font-size: 2.5vw; }
+  #contact-form-title { font-size: 2vw; }
+  #contact-form-subtitle { font-size: 1.3vw; }
+  #contact-form input, #contact-form textarea { font-size: 1.1vw; }
+  #contact-form select { font-size: 1.1vw; }
+  #contact-submit-btn { font-size: 1.2vw; }
+  .contact-box { min-width: 20vw; }
+  .contact-box h4 { font-size: 2vw; }
+  .contact-box p { font-size: 1vw; }
+
+  .service-area { padding: 7vh 5vw; }
+  .service-area-title { font-size: 2.5vw; }
+  .service-area-subtitle { font-size: 1.3vw; }
+  .service-area-map { height: 360px; }
+  .service-area-list > p { font-size: 1.2vw; }
+  .service-area-list ul li { font-size: 1.1vw; }
+  .service-area-list ul li i { font-size: 1vw; }
+  .home-base-tag { font-size: 0.8vw; }
+  .service-area-cta { font-size: 1.1vw; }
+
+  footer { font-size: 1.1vw; }
+  footer .social-icon { font-size: 1.4vw; }
+}
+
+/* Tablet: 768–1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Varela Round', sans-serif; line-height: 1.6; }
+  html { scroll-padding-top: 11vh; }
+
+  .top-ribbon {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: fixed;
+    padding: 0 4vw;
+    height: 8vh;
+    gap: 0;
+  }
+
+  .ribbon-logo img { display: none; }
+  .ribbon-label { font-size: 3.5vw; margin-right: auto; }
+  .hamburger-btn { display: flex; margin-left: auto; }
+
+  .ribbon-buttons {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--dark);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  .ribbon-buttons.open { max-height: 400px; }
+
+  .ribbon-buttons a {
+    font-size: 2.8vw;
+    padding: 2vh 5vw;
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+    background: none;
+    border-radius: 0;
+    letter-spacing: 0;
+  }
+
+  .ribbon-buttons a:hover { background: rgba(255,255,255,0.06); }
+
+  .ribbon-buttons a.ribbon-cta {
+    background: var(--orange);
+    color: white;
+    text-align: center;
+    margin: 2vh 4vw;
+    border-radius: 6px;
+    border-bottom: none;
+  }
+
+  .hero { padding: 30vh 5%; }
+  .text-container h1 { font-size: 9vw !important; }
+
+  .page-header { padding: 12vh 5% 4vh; }
+  .page-header h1 { font-size: 5vw; }
+  .page-header p { font-size: 2.5vw; }
+
+  .mission { padding: 6vh 5vw; }
+  .mission-title { font-size: 6vw; }
+  .mission-subtitle { font-size: 3.5vw; }
+  .mission-body { flex-direction: column; text-align: center; }
+  .mission-image img { width: 65vw; height: auto; }
+  .mission-text { font-size: 3vw; text-align: center; }
+  .feature-card { width: 28vw; }
+  .feature-icon { font-size: 4vw; }
+  .feature-card h3 { font-size: 2vw; }
+
+  .showcase { padding: 6vh 5vw; }
+  .showcase-title { font-size: 3.5vw; }
+  .showcase-subtitle { font-size: 2.5vw; }
+  .showcase-cards { flex-direction: column; gap: 3vh; }
+  .showcase-card { min-height: 42vh; }
+  .showcase-card-inner { padding: 3vh 4vw; }
+  .showcase-number { font-size: 5.5vw; }
+  .showcase-card-inner h3 { font-size: 3vw; }
+  .showcase-card-inner p { font-size: 2.5vw; }
+
+  .contact { padding: 6vh 4vw; }
+  #contact-section-title { font-size: 4vw; }
+  #contact-form-title { font-size: 4vw; }
+  #contact-form-subtitle { font-size: 2.5vw; }
+  #contact-form { max-width: 100%; padding: 4vh 5vw; }
+  #contact-form input, #contact-form textarea { font-size: 2.5vw; padding: 2vh 3vw; border-radius: 8px; }
+  #contact-form select { font-size: 2.5vw; padding: 2vh 3vw; border-radius: 8px; background-size: 3vw; background-position: right 3vw center; }
+  #contact-submit-btn { font-size: 3vw; padding: 2.5vh; }
+  .contact-box { min-width: 40vw; }
+  .contact-box h4 { font-size: 4vw; }
+  .contact-box p { font-size: 2.5vw; }
+
+  .service-area { padding: 6vh 5vw; }
+  .service-area-title { font-size: 3.5vw; }
+  .service-area-subtitle { font-size: 2.5vw; }
+  .service-area-body { flex-direction: column; }
+  .service-area-map { height: 300px; }
+  .service-area-list > p { font-size: 2.5vw; }
+  .service-area-list ul li { font-size: 2.5vw; gap: 2vw; }
+  .service-area-list ul li i { font-size: 2.2vw; }
+  .home-base-tag { font-size: 1.8vw; padding: 0.2vh 1.2vw; }
+  .service-area-cta { font-size: 2.5vw; }
+
+  footer { font-size: 2.5vw; }
+  footer .social-icon { font-size: 3vw; }
+  footer .social-icons { gap: 5vw; }
+}
+
+/* Mobile: 320–480px */
+@media (min-width: 320px) and (max-width: 480px) {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Varela Round', sans-serif; line-height: 1.6; }
+  html { scroll-padding-top: 12vh; }
+
+  .top-ribbon {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: fixed;
+    padding: 0 4vw;
+    height: 9vh;
+    gap: 0;
+  }
+
+  .ribbon-logo img { display: none; }
+  .ribbon-label { font-size: 4vw; margin-right: auto; }
+  .hamburger-btn { display: flex; margin-left: auto; }
+
+  .ribbon-buttons {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--dark);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    gap: 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  .ribbon-buttons.open { max-height: 400px; }
+
+  .ribbon-buttons a {
+    font-size: 4vw;
+    padding: 2.5vh 6vw;
+    color: rgba(255,255,255,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    text-align: left;
+    background: none;
+    border-radius: 0;
+    letter-spacing: 0;
+  }
+
+  .ribbon-buttons a:hover { background: rgba(255,255,255,0.06); }
+
+  .ribbon-buttons a.ribbon-cta {
+    background: var(--orange);
+    color: white;
+    text-align: center;
+    margin: 2vh 5vw;
+    border-radius: 6px;
+    border-bottom: none;
+  }
+
+  .hero { padding: 32vh 5%; }
+  .text-container h1 { font-size: 11vw !important; }
+
+  .page-header { padding: 14vh 5% 4vh; }
+  .page-header h1 { font-size: 6.5vw; }
+  .page-header p { font-size: 3.5vw; }
+
+  .mission { padding: 5vh 5vw; }
+  .mission-title { font-size: 7.5vw; }
+  .mission-subtitle { font-size: 4vw; }
+  .mission-body { flex-direction: column; text-align: center; padding: 3vh 4vw; gap: 2vh; }
+  .mission-image img { width: 80vw; height: auto; }
+  .mission-text { font-size: 4vw; text-align: center; }
+  .mission-features { gap: 4vw; }
+  .feature-card { width: 42vw; padding: 3vh 3vw; }
+  .feature-icon { font-size: 6vw; }
+  .feature-card h3 { font-size: 3vw; }
+
+  .showcase { padding: 5vh 5vw; }
+  .showcase-title { font-size: 5vw; }
+  .showcase-subtitle { font-size: 3.5vw; }
+  .showcase-cards { flex-direction: column; gap: 3vh; }
+  .showcase-card { min-height: 48vh; }
+  .showcase-card-inner { padding: 3vh 5vw; }
+  .showcase-number { font-size: 8vw; }
+  .showcase-card-inner h3 { font-size: 4.5vw; }
+  .showcase-card-inner p { font-size: 4vw; }
+
+  .contact { padding: 5vh 4vw; }
+  #contact-section-title { font-size: 5.5vw; }
+  #contact-form-title { font-size: 5.5vw; }
+  #contact-form-subtitle { font-size: 3.5vw; }
+  #contact-form { max-width: 100%; padding: 4vh 5vw; }
+  #contact-form input, #contact-form textarea { font-size: 3.5vw; padding: 2vh 4vw; border-radius: 8px; }
+  #contact-form select { font-size: 3.5vw; padding: 2vh 4vw; border-radius: 8px; background-size: 5vw; background-position: right 3vw center; }
+  #contact-form textarea { min-height: 15vh; }
+  #contact-submit-btn { font-size: 4vw; padding: 2.5vh; }
+  .contact-info-row { gap: 4vw; }
+  .contact-box { min-width: 80vw; }
+  .contact-box h4 { font-size: 5.5vw; }
+  .contact-box p { font-size: 3.5vw; }
+
+  .service-area { padding: 5vh 5vw; }
+  .service-area-title { font-size: 5vw; }
+  .service-area-subtitle { font-size: 3.5vw; }
+  .service-area-body { flex-direction: column; }
+  .service-area-map { height: 250px; }
+  .service-area-list > p { font-size: 4vw; }
+  .service-area-list ul { gap: 1.2vh; }
+  .service-area-list ul li { font-size: 4vw; gap: 3vw; }
+  .service-area-list ul li i { font-size: 3.5vw; }
+  .home-base-tag { font-size: 2.8vw; padding: 0.3vh 2vw; margin-left: 1vw; }
+  .service-area-cta { font-size: 3.5vw; }
+
+  footer { font-size: 3.5vw; padding: 3vh 4vw; }
+  footer .social-icon { font-size: 5vw; }
+  footer .social-icons { gap: 7vw; }
+}
